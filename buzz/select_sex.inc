@@ -1,0 +1,7 @@
+<!--	Copyright © 2015 - sayitagain.pw 
+ 	Author - Dmitry Kuznetsov		-->
+<select class="form-control selectpicker" data-width="100%" name="sex" id="sex">
+	<option value="-1" selected="selected">Sex</option>
+	<option value="1">Male</option>
+	<option value="0">Female</option>
+</select>
