@@ -2,7 +2,7 @@
  	Author - Dmitry Kuznetsov		-->
 <?php
   $f = fopen("countries.csv", "r");
-  echo "<select class=\"form-control lang selectpicker\" data-width=\"100%\" data-live-search=”true” id=\"location\" name=\"location\" required>\n";
+  echo "<select class=\"form-control lang selectpicker\" data-live-search=”true” id=\"location\" name=\"location\" required>\n";
   echo "<option value=\"\"  selected=\"selected\">Select location</option>\n";
   while (!feof($f)) {
     $quote = fgetcsv($f, 512, ',');

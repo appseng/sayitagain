@@ -78,81 +78,75 @@
   <br />
   <br />
   <br />
-    <!-- advertisement -->
-    <div class="text-center">
-        <!-- advertisement BEGIN-->
-        <!-- advertisement END-->
-    </div>
-    
     <br />
     <div class="conteiner-fluid">
       <div class="panel panel-success">
         <div>
 	  <form class="form-inline" id="input-form">
-            <div class="header-info text-center">
-                <span class="mark h3">Some info about you</span>
-            </div>
+      <div class="header-info text-center">
+        <span class="mark h3">Some info about you</span>
+      </div>
 	    <div class="row row-first">
 	      <div class="form-group col-sm-3 col-sm-offset-1 col-xs-3 col-xs-offset-1 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-1">
-		 <div class="input-group">
-		  <input type="text" class="form-control" name="nick" id="nick" placeholder="Nick name" required>
-		  <span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>
-		</div>
+          <div class="input-group  col-sm-12">
+            <input type="text" class="form-control" name="nick" id="nick" placeholder="Nick name" required>
+            <span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>
+          </div>
 	      </div>
-	      <div class="form-group col-sm-2 col-sm-offset-1 col-xs-3 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-1">
-		<?php
-		  include 'select_age.inc';
-		?>
+	      <div class="form-group col-sm-3 col-xs-3 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-1">
+          <?php
+            include 'select_age.inc';
+          ?>
 	      </div>
-	      <div class="form-group col-sm-4 col-sm-offset-1 col-xs-4 col-md-4 col-md-offset-1 col-lg-4 col-lg-offset-1">
-		<div class="input-group">
-		  <?php
-		    include 'getcountries.php';
-		  ?>
-		  <span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>
-		</div>
-	      </div>
-	    </div>
-	    <div class="row row-middle">
-	      <div class="form-group col-sm-3 col-sm-offset-1 col-xs-3 col-xs-offset-1 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-1">
-		<div class="input-group">
-		  <input type="text" class="form-control" name="skype" id="skype" placeholder="Skype">
-		  <span class="input-group-addon info"><span class="glyphicon glyphicon-asterisk"></span></span>
-		</div>
-	      </div>
-	      <div class="form-group col-sm-2 col-sm-offset-1 col-xs-3 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-1">
-		<?php
-		  include 'select_sex.inc';
-		?>
-	      </div>
-	      <div class="form-group col-sm-4 col-sm-offset-1 col-xs-4 col-md-4 col-md-offset-1 col-lg-4 col-lg-offset-1">
-		  <?php
-		    include 'select_language.inc';
-		  ?>
+	      <div class="form-group col-sm-3 col-sm-offset-1 col-xs-4 col-md-4 col-lg-4 col-lg-offset-1">
+          <div class="input-group col-sm-12">
+            <?php
+              include 'getcountries.php';
+            ?>
+            <span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>
+          </div>
 	      </div>
 	    </div>
 	    <div class="row row-middle">
 	      <div class="form-group col-sm-3 col-sm-offset-1 col-xs-3 col-xs-offset-1 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-1">
-		<div class="input-group">
-		  <input type="text" class="form-control" name="icq" id="icq" placeholder="ICQ number">
-		  <span class="input-group-addon info"><span class="glyphicon glyphicon-asterisk"></span></span>
-		</div>
+          <div class="input-group">
+            <input type="text" class="form-control" name="skype" id="skype" placeholder="Skype">
+            <span class="input-group-addon info"><span class="glyphicon glyphicon-asterisk"></span></span>
+          </div>
 	      </div>
-	      <div class="form-group col-sm-2 col-sm-offset-1 col-xs-3 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-1">
-		<?php
-		  include 'select_goal.inc';
-		?>
+	      <div class="form-group col-sm-3 col-xs-3 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-1">
+          <?php
+            include 'select_sex.inc';
+          ?>
 	      </div>
-	      <div class="form-group col-sm-4 col-sm-offset-1 col-xs-4 col-md-4 col-md-offset-1 col-lg-4 col-lg-offset-1">
-		<?php
-		  include 'select_level.inc';
-		?>
+	      <div class="form-group col-sm-3 col-sm-offset-1 col-xs-4 col-md-4 col-lg-4 col-lg-offset-1">
+          <?php
+            include 'select_language.inc';
+          ?>
+	      </div>
+	    </div>
+	    <div class="row row-middle">
+	      <div class="form-group col-sm-3 col-sm-offset-1 col-xs-3 col-xs-offset-1 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-1">
+          <div class="input-group">
+            <input type="text" class="form-control" name="icq" id="icq" placeholder="ICQ number">
+            <span class="input-group-addon info"><span class="glyphicon glyphicon-asterisk"></span></span>
+          </div>
+	      </div>
+	      <div class="form-group col-sm-3 col-xs-3 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-1">
+          <?php
+            include 'select_goal.inc';
+          ?>
+	      </div>
+	      <div class="form-group col-sm-3 col-sm-offset-1 col-xs-4 col-md-4 col-lg-4 col-lg-offset-1">
+          <?php
+            include 'select_level.inc';
+          ?>
 	      </div>
 	    </div>
 	    <div class="row text-center row-last">
-		<button type=button class="btn btn-success"  id="submit">
-		  <span class="glyphicon glyphicon-user"></span> Add and/or Refresh</button>
-            </div>
+		    <button type=button class="btn btn-success"  id="submit">
+		    <span class="glyphicon glyphicon-user"></span> Add and/or Refresh</button>
+      </div>
 	  </form>
       </div>
     </div>  
@@ -160,29 +154,22 @@
       <br />
       <br />
       <div class="panel-1">
-	<div class="row">
-	  <div id="learners" class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
-	    <!--?php
-	      include 'getquote.php';
-	    ?-->
-	  </div>
-	</div>
+        <div class="row">
+          <div id="learners" class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+            <!--?php
+              include 'getquote.php';
+            ?-->
+          </div>
+        </div>
       </div>
       <br />
       <br />
       <br />
-      </div>
-      <div class="text-center">
-
       </div>
       <br />
       <div class="center">
-	<span><kbd>Copyright © 2015</kbd> | <code><a href="privacy.html">Privacy policy</a></code> | <abbr title="Say It Again!"><code><a href="/">sayitagain.zz.vc &amp; sayitagain.pw</a></code></abbr> | <code><a href="mailto:sayitagain666@gmail.com">contacts</a></code></span>
+	      <span><kbd>Copyright © 2015</kbd> | <code><a href="privacy.html">Privacy policy</a></code> | <abbr title="Say It Again!"><code><a href="/">sayitagain.zz.vc &amp; sayitagain.pw</a></code></abbr> | <code><a href="mailto:sayitagain666@gmail.com">contacts</a></code></span>
       </div>
       <br />
-      <div class="text-center">
-	<!-- advertisement BEGIN-->
-	<!-- advertisement END-->
-      </div>
     </body>
 </html>
