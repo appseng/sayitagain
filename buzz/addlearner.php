@@ -199,7 +199,7 @@ if (isset($_POST["sex"]) &&
         isset($_POST["language"]) &&
         isset($_POST["level"])
     ) {
-    connect();
+    connect(); // function from dbinfo.php to connect to mysql
     $age = check($_POST["age"],-1,2);
     $sex = check($_POST["sex"],-1);
     $goal = check($_POST["goal"],-1);
