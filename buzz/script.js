@@ -28,9 +28,10 @@ function addlearner() {
                 level:level
         },
         success: function(data){
-            $("#submit").show();
-
             $("#learners").html(data);
+        },
+        complete: function(){
+            $("#submit").show();
         },
         dataType: "html"  
     });
