@@ -70,7 +70,7 @@
           </li>
         </ul>
         <div class="navbar-text navbar-right start-button">
-            <div style="margin-right:25px" class="fb-share-button" data-href="http://sayitagain.pw/buzz/" data-layout="icon_link"></div>
+            <div style="margin-right:25px" class="fb-share-button" data-href="http://sayitagain.zz.vc/buzz/" data-layout="icon_link"></div>
         </div>
       </div>
     </div>
