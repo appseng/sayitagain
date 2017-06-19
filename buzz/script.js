@@ -31,6 +31,7 @@ function addlearner() {
             $("#learners").html(data);
         },
         complete: function(){
+            $("#loader").hide();
             $("#submit").show();
         },
         dataType: "html"  
@@ -71,8 +72,10 @@ $(document).ready(function(){
     $('.selectpicker').selectpicker();
 
     $("#submit").click(function(){
+        $("#learners").html('');
         $("#submit").hide();
-
+        $("#loader").show();
+        
         clearInterval(iid);
         clearTimeout(tid);
         tid = setTimeout(addlearner, 500);

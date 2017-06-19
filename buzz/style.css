@@ -54,3 +54,28 @@ table.learners td,table.learners th {
   border-color: rgb(212, 63, 58);
 }
 
+/* loading animation
+---------------------- */
+.load-wrapp {
+    width: 150px;
+    height: 100px;
+    margin: 0 auto;
+    padding: 20px 20px 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+.load-wrapp p {padding: 0 0 20px;}
+.ring-1 {
+    width: 10px;
+    height: 10px;
+    margin: 0 auto;
+    padding: 10px;
+    border: 7px dashed #4b9cdb;
+    border-radius: 100%;
+}
+.load-4 .ring-1 {animation: loadingD 1.5s .3s cubic-bezier(.17,.37,.43,.67) infinite;}
+@keyframes loadingD {
+    0% {transform: rotate(0deg);}
+    50% {transform: rotate(180deg);}
+    100% {transform: rotate(360deg);}
+}

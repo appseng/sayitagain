@@ -161,6 +161,15 @@
             ?-->
           </div>
         </div>
+        <div class="row">
+        <div  class="text-center" id="loader">
+          <div class="load-wrapp">
+            <div class="load-4">
+              <p>Loading ...</p>
+              <div class="ring-1"></div>
+            </div>
+        </div>
+        </div>
       </div>
       <br />
       <br />
