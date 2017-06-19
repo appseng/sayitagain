@@ -23,28 +23,6 @@
     <meta name="description" content=" Free practice, enjoyable conversations, speaking, writing in a lot of languages (English, Spanish, Mandarin, Russian, German, French, Italian etc.) online via Skype or/and ICQ. Start improving your speaking, writing, listening, reading skills as soon as you start to talk.">
   </head>
   <body>
-  <!--facebook sharer-->
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-  <!-- begin google-analytics -->
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-62332331-1', 'auto');
-  ga('send', 'pageview');
-  </script>
-  <!-- end google-analytics -->
-  
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="conteiner-fluid">
       <div class="navbar-header brand-name">
@@ -69,9 +47,6 @@
             </ul>
           </li>
         </ul>
-        <div class="navbar-text navbar-right start-button">
-            <div style="margin-right:25px" class="fb-share-button" data-href="http://sayitagain.zz.vc/buzz/" data-layout="icon_link"></div>
-        </div>
       </div>
     </div>
   </nav>
@@ -180,5 +155,7 @@
 	      <span><kbd>Copyright © 2017</kbd> | <code><a href="privacy.html">Privacy policy</a></code> | <abbr title="Say It Again!"><code><a href="/">sayitagain.zz.vc</a></code></abbr> | <code><a href="mailto:sayitagain666@gmail.com">contacts</a></code></span>
       </div>
       <br />
+      <!-- Go to www.addthis.com/dashboard to customize your tools -->
+      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5947fc616a5c95ea"></script> 
     </body>
 </html>
