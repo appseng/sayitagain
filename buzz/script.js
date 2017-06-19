@@ -3,16 +3,28 @@
  */
 var iid = null; var tid = null;
 function addlearner() {
-    var nick = $("#nick").val();
-    var skype = $("#skype").val();
-    var icq = $("#icq").val();
-    var age = $("#age").val();
-    var sex = $("#sex").val();
-    var goal = $("#goal").val();
-    var language = $("#language").val();
-    var location = getString($("#location").val(),"--");
-    var level = $("#level").val();
-    saveUserInfo();
+    const nick = $("#nick").val(),
+        skype = $("#skype").val(),
+        icq = $("#icq").val(),
+        age = $("#age").val(),
+        sex = $("#sex").val(),
+        goal = $("#goal").val(),
+        language = $("#language").val(),
+        location = getString($("#location").val(),"--"),
+        level = $("#level").val();
+
+    // saveUserInfo
+    $.cookie('nick', nick, { expires: 365, path: '/' });
+    $.cookie('skype', skype, { expires: 365, path: '/' });
+    $.cookie('icq', icq, { expires: 365, path: '/' });
+    $.cookie('age', age, { expires: 365, path: '/' });
+    $.cookie('sex', sex, { expires: 365, path: '/' });
+    $.cookie('goal', goal, { expires: 365, path: '/' });
+    $.cookie('language', language, { expires: 365, path: '/' });
+    $.cookie('location', location, { expires: 365, path: '/' });
+    $.cookie('level', level, { expires: 365, path: '/' });
+
+
     $.ajax({
         type: "POST",
         url: "addlearner.php",
@@ -38,17 +50,6 @@ function addlearner() {
     });
     }
 
-function saveUserInfo() {
-    $.cookie('nick', $("#nick").val(), { expires: 365, path: '/' });
-    $.cookie('skype', $("#skype").val(), { expires: 365, path: '/' });
-    $.cookie('icq', $("#icq").val(), { expires: 365, path: '/' });
-    $.cookie('age', $("#age").val(), { expires: 365, path: '/' });
-    $.cookie('sex', $("#sex").val(), { expires: 365, path: '/' });
-    $.cookie('goal', $("#goal").val(), { expires: 365, path: '/' });
-    $.cookie('language', $("#language").val(), { expires: 365, path: '/' });
-    $.cookie('location', $("#location").val(), { expires: 365, path: '/' });
-    $.cookie('level',$("#level").val(), { expires: 365, path: '/' });
-}
 function getString(f,def) {
     r = (f =="" || f=="undefined" || f==null)? def : f;
     return r;
@@ -73,7 +74,7 @@ $(document).ready(function(){
 
     $("#submit").click(function(){
         $("#learners").html('');
-        $("#submit").hide();
+        $(this).hide();
         $("#loader").show();
         
         clearInterval(iid);
@@ -83,13 +84,14 @@ $(document).ready(function(){
     });
 
     $('.input-group input[required], .input-group select[required]').on('keyup change', function() {
-        var $form = $(this).closest('form'),
-            $group = $(this).closest('.input-group'),
+        var $this = $(this),
+            $form = $this.closest('form'),
+            $group = $this.closest('.input-group'),
             $addon = $group.find('.input-group-addon'),
             $icon = $addon.find('span'),
             state = false;
         if (!$group.data('validate')) {
-            state = $(this).val() ? true : false;
+            state = $this.val() ? true : false;
         }
         if (state) {
             $addon.removeClass('danger');
