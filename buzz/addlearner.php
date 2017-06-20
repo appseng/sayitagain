@@ -43,55 +43,55 @@ function goalRendering($f) {
 function goalTitleRendering($f) {
     switch($f) {
         case 0:
-            $goal = "I just want to improve my skills.";
+            $goalTitle = "I just want to improve my skills.";
             break;
         case 1:
-            $goal = "I just want to find a friend to learn a language together.";
+            $goalTitle = "I just want to find a friend to learn a language together.";
             break;
         case 2:
-            $goal = "I just want to find a students to teach them.";
+            $goalTitle = "I just want to find a students to teach them.";
             break;
         case 3:
-            $goal = "I just want to find a teacher to learn a language with them.";
+            $goalTitle = "I just want to find a teacher to learn a language with them.";
             break;
         default:
-            $goal = "";
+            $goalTitle = "";
     }
-    return $goal;
+    return $goalTitle;
 }
-function sexRendering($f) {
+function genderRendering($f) {
     switch($f) {
         case 0:
-            $sex = "F";
+            $gender = "F";
             break;
         case 1:
-            $sex = "M";
+            $gender = "M";
             break;
         case 2:
-            $sex = "X";
+            $gender = "X";
             break;
         default:
-            $sex = "--";
+            $gender = "--";
             break;
     }
-    return $sex;
+    return $gender;
 }
-function sexTitleRendering($s) {
+function genderTitleRendering($s) {
     switch($s) {
         case "M":
-            $sexTitle = "Male";
+            $genderTitle = "Male";
             break;
        case "F":
-            $sexTitle = "Female";
+            $genderTitle = "Female";
             break;
         case "X":
-            $sexTitle = "Other";
+            $genderTitle = "Other";
             break;
         default:
-            $sexTitle = "";
+            $genderTitle = "";
             break;
     }
-    return $sexTitle;
+    return $genderTitle;
 }
 function levelRendering($f) {
     switch($f) {
@@ -128,21 +128,21 @@ function sql_die() {
 }
 function tableContent($stmt) {
     $result = "";
-    mysqli_stmt_bind_result($stmt, $nick, $skype, $icq, $age, $sex, $goal, $location, $language, $level, $visitedtime);
+    mysqli_stmt_bind_result($stmt, $nick, $skype, $icq, $age, $gender, $goal, $location, $language, $level, $visitedtime);
     while (mysqli_stmt_fetch($stmt)) {
-        $goal = goalRendering($goal);
+        $goalText = goalRendering($goal);
         $goalTitle = goalTitleRendering($goal);
-        $goaltd = ($goalTitle =="")? $goal : "<abbr title=\"$goalTitle\">$goal</abbr>";
-        $sex = sexRendering($sex);
-        $sexTitle = sexTitleRendering($sex);
-        $sextd = ($sexTitle =="") ? $sex : "<abbr title=\"$sexTitle\">$sex</abbr>";
+        $goaltd = ($goalTitle =="")? $goalText : "<abbr title=\"$goalTitle\">$goalText</abbr>";
+        $gender = genderRendering($gender);
+        $genderTitle = genderTitleRendering($gender);
+        $gendertd = ($genderTitle =="") ? $gender : "<abbr title=\"$genderTitle\">$gender</abbr>";
 
         $level = levelRendering($level);
         $age = ($age == -1)? "--" : $age;
 
         $skype_url = ($skype != null && $skype != "--") ? "<a href=\"skype:$skype?chat\"><img alt=\"skype:$skype?chat\" title=\"skype:$skype?chat\" src=\"skype12.png\" /><a>" : "";
         $icq_url =  ($icq != null && $icq != "--") ? "<a href=\"icq:$icq\"><img src=\"icq.png\" alt=\"icq:$icq\" title=\"icq:$icq\" /><a>" : "";
-        $result .= "<tr><td><kbd>$nick</kbd></td><td><kbd>$age</kbd></td><td><kbd>$sextd</kbd></td><td><kbd>$goaltd</kbd></td><td><img id=\"flag\" alt=\"$location\" title=\"$location\" src=\"http://www.geonames.org/flags/x/".strtolower($location).".gif\" /></td><td><kbd>$level</kbd></td><td>$skype_url  $icq_url</td><td class=\"last-time-info-updated\"><kbd>$visitedtime</kbd></td></tr>";
+        $result .= "<tr><td><kbd>$nick</kbd></td><td><kbd>$age</kbd></td><td><kbd>$gendertd</kbd></td><td><kbd>$goaltd</kbd></td><td><img id=\"flag\" alt=\"$location\" title=\"$location\" src=\"http://www.geonames.org/flags/x/".strtolower($location).".gif\" /></td><td><kbd>$level</kbd></td><td>$skype_url  $icq_url</td><td class=\"last-time-info-updated\"><kbd>$visitedtime</kbd></td></tr>";
     }
     return $result;
 }
@@ -151,7 +151,7 @@ function selectInfo($language,$ip) {
     $result = "<table class=\"learners table table-condensed table-hover\"><thead><tr>
           <th>Nickname</th>
           <th>Age</th>
-          <th>Sex</th>
+          <th>Gender</th>
           <th>Goal</th>
           <th>Location</th>
           <th>Level</th>
@@ -159,7 +159,7 @@ function selectInfo($language,$ip) {
           <th class=\"last-time-info-updated\">Time</th>          
           </tr></thead><tbody>";
           
-//     $stmt = mysqli_prepare($conn,"select nick,skype,icq,age,sex,goal,location,language,level,visitedtime from $db_table where language = ? and ip = ?");
+//     $stmt = mysqli_prepare($conn,"select nick,skype,icq,age,gender,goal,location,language,level,visitedtime from $db_table where language = ? and ip = ?");
 //     mysqli_stmt_bind_param($stmt, "ss", $language, $ip);
 //     mysqli_stmt_execute($stmt);
 //     
@@ -170,7 +170,7 @@ function selectInfo($language,$ip) {
 //     mysqli_stmt_free_result($stmt);
 //     mysqli_stmt_close($stmt);
 
-    $stmt = mysqli_prepare($conn,"select nick,skype,icq,age,sex,goal,location,language,level,visitedtime from $db_table where language = ? order by visitedtime desc");
+    $stmt = mysqli_prepare($conn,"select nick,skype,icq,age,gender,goal,location,language,level,visitedtime from $db_table where language = ? order by visitedtime desc");
     mysqli_stmt_bind_param($stmt, "s", $language);
     mysqli_stmt_execute($stmt);
     
@@ -198,7 +198,7 @@ if (!filter_var($ip, FILTER_VALIDATE_IP)){
     die ("Error in HTTP_HEADER");
 }
 // checking all neccessary post variables
-if (isset($_POST["sex"]) && 
+if (isset($_POST["gender"]) && 
         isset($_POST["age"]) && 
         isset($_POST["goal"]) && 
         isset($_POST["location"]) &&
@@ -207,7 +207,7 @@ if (isset($_POST["sex"]) &&
     ) {
     connect(); // function from dbinfo.php to connect to mysql
     $age = check($_POST["age"],-1,2);
-    $sex = check($_POST["sex"],-1);
+    $gender = check($_POST["gender"],-1);
     $goal = check($_POST["goal"],-1);
     $location = check($_POST["location"],"--",2);
     $language = check($_POST["language"],"--",80);
@@ -224,15 +224,15 @@ if (isset($_POST["sex"]) &&
 //      $level != "--" &&
         $location != "--" //&& 	
 //      $goal != "--" &&
-//      $sex != "--" &&
+//      $gender != "--" &&
 //      $age != "--")
         ) {
 //      echo "$nick : $skype";
         // update ip if it has been changed from previous visit on the page
         // commented because of the cost of the operation
         /*
-        $stmt = mysqli_prepare($conn,"update $db_table set ip = ? where nick = ? and skype = ? and icq = ? and age = ? and sex = ? and goal = ? and location = ? and language = ? and level = ?");
-        mysqli_stmt_bind_param($stmt, "ssssiiissi", $ip, $nick, $skype, $icq, $age, $sex, $goal, $location, $language, $level);
+        $stmt = mysqli_prepare($conn,"update $db_table set ip = ? where nick = ? and skype = ? and icq = ? and age = ? and gender = ? and goal = ? and location = ? and language = ? and level = ?");
+        mysqli_stmt_bind_param($stmt, "ssssiiissi", $ip, $nick, $skype, $icq, $age, $gender, $goal, $location, $language, $level);
         mysqli_stmt_execute($stmt);
         mysqli_stmt_close($stmt);
         */
@@ -247,14 +247,14 @@ if (isset($_POST["sex"]) &&
         mysqli_stmt_close($stmt);
         
         if ($rows == 0) {
-            $stmt = mysqli_prepare($conn,"insert into $db_table (nick,skype,icq,age,sex,goal,location,language,level,visitedtime,ip) values(?, ?, ?, ?, ?, ?, ?, ?, ?,now(), ?)");
-            mysqli_stmt_bind_param($stmt, "sssiiissis" , $nick, $skype, $icq, $age, $sex, $goal, $location, $language, $level, $ip);
+            $stmt = mysqli_prepare($conn,"insert into $db_table (nick,skype,icq,age,gender,goal,location,language,level,visitedtime,ip) values(?, ?, ?, ?, ?, ?, ?, ?, ?,now(), ?)");
+            mysqli_stmt_bind_param($stmt, "sssiiissis" , $nick, $skype, $icq, $age, $gender, $goal, $location, $language, $level, $ip);
             mysqli_stmt_execute($stmt);
             mysqli_stmt_close($stmt);
         }
         else {
-            $stmt = mysqli_prepare($conn,"update $db_table set nick=?, skype=?, icq=?, age=?, sex=?, goal=?, location=?, language=?, level=?, visitedtime=now() where ip = ?");
-            mysqli_stmt_bind_param($stmt, "sssiiissis" , $nick, $skype, $icq, $age, $sex, $goal, $location, $language, $level, $ip);
+            $stmt = mysqli_prepare($conn,"update $db_table set nick=?, skype=?, icq=?, age=?, gender=?, goal=?, location=?, language=?, level=?, visitedtime=now() where ip = ?");
+            mysqli_stmt_bind_param($stmt, "sssiiissis" , $nick, $skype, $icq, $age, $gender, $goal, $location, $language, $level, $ip);
             mysqli_stmt_execute($stmt);
             mysqli_stmt_close($stmt);
         }

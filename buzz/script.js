@@ -7,7 +7,7 @@ function addlearner() {
         skype = $("#skype").val(),
         icq = $("#icq").val(),
         age = $("#age").val(),
-        sex = $("#sex").val(),
+        gender = $("#gender").val(),
         goal = $("#goal").val(),
         language = $("#language").val(),
         location = getString($("#location").val(),"--"),
@@ -18,7 +18,7 @@ function addlearner() {
     $.cookie('skype', skype, { expires: 365, path: '/' });
     $.cookie('icq', icq, { expires: 365, path: '/' });
     $.cookie('age', age, { expires: 365, path: '/' });
-    $.cookie('sex', sex, { expires: 365, path: '/' });
+    $.cookie('gender', gender, { expires: 365, path: '/' });
     $.cookie('goal', goal, { expires: 365, path: '/' });
     $.cookie('language', language, { expires: 365, path: '/' });
     $.cookie('location', location, { expires: 365, path: '/' });
@@ -33,7 +33,7 @@ function addlearner() {
                 skype:skype,
                 icq:icq,
                 age:age,
-                sex:sex,
+                gender:gender,
                 goal:goal,
                 language:language,
                 location:location,
@@ -59,7 +59,7 @@ function restoreUserInfo() {
     $("#skype").val(getString($.cookie("skype"),""));
     $("#icq").val(getString($.cookie("icq"),""));
     $("#age").val(getString($.cookie("age"),"--"));
-    $("#sex").val(getString($.cookie("sex"),"--"));
+    $("#gender").val(getString($.cookie("gender"),"--"));
     $("#goal").val(getString($.cookie("goal"),"--"));
     $("#language").val(getString($.cookie("language"),"--"));
     $("#location").val(getString($.cookie("location"),"--"));

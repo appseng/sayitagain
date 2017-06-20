@@ -91,7 +91,7 @@
 	      </div>
 	      <div class="form-group col-sm-3 col-xs-3 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-1">
           <?php
-            include 'select_sex.inc';
+            include 'select_gender.inc';
           ?>
 	      </div>
 	      <div class="form-group col-sm-3 col-sm-offset-1 col-xs-4 col-md-4 col-lg-4 col-lg-offset-1">
