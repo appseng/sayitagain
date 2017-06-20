@@ -67,6 +67,9 @@ function sexRendering($f) {
         case 1:
             $sex = "M";
             break;
+        case 2:
+            $sex = "X";
+            break;
         default:
             $sex = "--";
             break;
@@ -80,6 +83,9 @@ function sexTitleRendering($s) {
             break;
        case "F":
             $sexTitle = "Female";
+            break;
+        case "X":
+            $sexTitle = "Other";
             break;
         default:
             $sexTitle = "";
