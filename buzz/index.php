@@ -76,7 +76,7 @@
 	      <div class="form-group col-sm-3 col-sm-offset-1 col-xs-4 col-md-4 col-lg-4 col-lg-offset-1">
           <div class="input-group col-sm-12">
             <?php
-              include 'getcountries.php';
+              include 'select_country.inc';
             ?>
             <span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>
           </div>
