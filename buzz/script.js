@@ -30,7 +30,7 @@ function goalTitleRendering($f) {
             $goalTitle = "I just want to find a friend to learn a language together.";
             break;
         case 2:
-            $goalTitle = "I just want to find a students to teach them.";
+            $goalTitle = "I just want to find a student to teach them.";
             break;
         case 3:
             $goalTitle = "I just want to find a teacher to learn a language with them.";
@@ -89,7 +89,7 @@ function levelRendering($f) {
             $level = "Intermediate";
             break;
         case 4:
-            $level = "Upper-Intermediate";
+            $level = "Upper-intermediate";
             break;
         case 5:
             $level = "Advanced";
@@ -157,7 +157,7 @@ function addlearner() {
 
                     data.shift(); 
                     data.forEach(function(item) {
-                         var goalText = goalRendering(item.goal),
+                        var goalText = goalRendering(item.goal),
                             goalTitle = goalTitleRendering(item.goal),
                             goaltd = (goalTitle =="")? goalText : "<abbr title=\"" + goalTitle + "\">" + goalText + "</abbr>",
                             gender = genderRendering(item.gender),
