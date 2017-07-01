@@ -1,5 +1,3 @@
-<!--	Copyright © 2015 - www.sayitagain.pw 
-        Author - Dmitry Kuznetsov                       -->
 <?php
 include 'dbinfo.php';
 
@@ -21,154 +19,14 @@ function check($field, $def,$len=1) {
     }  
     return $f;
 }
-function goalRendering($f) {
-    switch($f) {
-        case 0:
-            $goal = "Chat";
-            break;
-        case 1:
-            $goal = "Friend";
-            break;
-        case 2:
-            $goal = "Student";
-            break;
-        case 3:
-            $goal = "Teacher";
-            break;
-        default:
-            $goal = "--";
-    }
-    return $goal;
-}
-function goalTitleRendering($f) {
-    switch($f) {
-        case 0:
-            $goalTitle = "I just want to improve my skills.";
-            break;
-        case 1:
-            $goalTitle = "I just want to find a friend to learn a language together.";
-            break;
-        case 2:
-            $goalTitle = "I just want to find a students to teach them.";
-            break;
-        case 3:
-            $goalTitle = "I just want to find a teacher to learn a language with them.";
-            break;
-        default:
-            $goalTitle = "";
-    }
-    return $goalTitle;
-}
-function genderRendering($f) {
-    switch($f) {
-        case 0:
-            $gender = "F";
-            break;
-        case 1:
-            $gender = "M";
-            break;
-        case 2:
-            $gender = "X";
-            break;
-        default:
-            $gender = "--";
-            break;
-    }
-    return $gender;
-}
-function genderTitleRendering($s) {
-    switch($s) {
-        case "M":
-            $genderTitle = "Male";
-            break;
-       case "F":
-            $genderTitle = "Female";
-            break;
-        case "X":
-            $genderTitle = "Other";
-            break;
-        default:
-            $genderTitle = "";
-            break;
-    }
-    return $genderTitle;
-}
-function levelRendering($f) {
-    switch($f) {
-        case 0:
-            $level = "Starter";
-            break;
-        case 1:
-            $level = "Elementary";
-            break;
-        case 2:
-            $level = "Pre-intermediate";
-            break;
-        case 3:
-            $level = "Intermediate";
-            break;
-        case 4:
-            $level = "Upper-Intermediate";
-            break;
-        case 5:
-            $level = "Advanced";
-            break;
-        case 6:
-            $level = "Proficient";
-            break;
-        default:
-            $level = "--";
-            break;
-    }
-    return $level;
-}
+
 function sql_die() {
     mysqli_query($conn, "ROLLBACK");
     die(mysql_error());
 }
-function tableContent($stmt) {
-    $result = "";
-    mysqli_stmt_bind_result($stmt, $nick, $skype, $icq, $age, $gender, $goal, $location, $language, $level, $visitedtime);
-    while (mysqli_stmt_fetch($stmt)) {
-        $goalText = goalRendering($goal);
-        $goalTitle = goalTitleRendering($goal);
-        $goaltd = ($goalTitle =="")? $goalText : "<abbr title=\"$goalTitle\">$goalText</abbr>";
-        $gender = genderRendering($gender);
-        $genderTitle = genderTitleRendering($gender);
-        $gendertd = ($genderTitle =="") ? $gender : "<abbr title=\"$genderTitle\">$gender</abbr>";
 
-        $level = levelRendering($level);
-        $age = ($age == -1)? "--" : $age;
-
-        $skype_url = ($skype != null && $skype != "--") ? "<a href=\"skype:$skype?chat\"><img alt=\"skype:$skype?chat\" title=\"skype:$skype?chat\" src=\"skype12.png\" /><a>" : "";
-        $icq_url =  ($icq != null && $icq != "--") ? "<a href=\"icq:$icq\"><img src=\"icq.png\" alt=\"icq:$icq\" title=\"icq:$icq\" /><a>" : "";
-        $result .= "<tr><td><kbd>$nick</kbd></td><td><kbd>$age</kbd></td><td><kbd>$gendertd</kbd></td><td><kbd>$goaltd</kbd></td><td><img id=\"flag\" alt=\"$location\" title=\"$location\" src=\"http://www.geonames.org/flags/x/".strtolower($location).".gif\" /></td><td><kbd>$level</kbd></td><td>$skype_url  $icq_url</td><td class=\"last-time-info-updated\"><kbd>$visitedtime</kbd></td></tr>";
-    }
-    return $result;
-}
 function selectInfo($language,$ip) {
     global $db_table, $conn;
-    $result = "<table class=\"learners table table-condensed table-hover\"><thead><tr>
-          <th>Nickname</th>
-          <th>Age</th>
-          <th>Gender</th>
-          <th>Goal</th>
-          <th>Location</th>
-          <th>Level</th>
-          <th>Skype/ICQ</th>
-          <th class=\"last-time-info-updated\">Time</th>          
-          </tr></thead><tbody>";
-          
-//     $stmt = mysqli_prepare($conn,"select nick,skype,icq,age,gender,goal,location,language,level,visitedtime from $db_table where language = ? and ip = ?");
-//     mysqli_stmt_bind_param($stmt, "ss", $language, $ip);
-//     mysqli_stmt_execute($stmt);
-//     
-//     mysqli_stmt_store_result($stmt);
-//     $rows = mysqli_stmt_num_rows($stmt);
-//     $result .= tableContent($stmt);
-
-//     mysqli_stmt_free_result($stmt);
-//     mysqli_stmt_close($stmt);
 
     $stmt = mysqli_prepare($conn,"select nick,skype,icq,age,gender,goal,location,language,level,visitedtime from $db_table where language = ? order by visitedtime desc");
     mysqli_stmt_bind_param($stmt, "s", $language);
@@ -177,8 +35,27 @@ function selectInfo($language,$ip) {
     mysqli_stmt_store_result($stmt);
     $rows = mysqli_stmt_num_rows($stmt);
 
-    $result .= tableContent($stmt);
-    $result .="</tbody></table>";
+    mysqli_stmt_bind_result($stmt, $nick, $skype, $icq, $age, $gender, $goal, $location, $language, $level, $visitedtime);
+    $arResult = [
+        "table"
+    ];
+    while (mysqli_stmt_fetch($stmt)) {
+        $lineResult = [
+            'nick' => $nick,
+            'skype' => $skype,
+            'icq' => $icq,
+            'age' => $age,
+            'gender' => $gender,
+            'goal' => $goal,
+            'location' => strtolower($location),
+            'language' => $language,
+            'level' => $level,
+            'visitedtime' => $visitedtime
+        ];
+        array_push($arResult, $lineResult);
+    }
+    
+    $result = json_encode($arResult);
 
     mysqli_stmt_free_result($stmt);
     mysqli_stmt_close($stmt);

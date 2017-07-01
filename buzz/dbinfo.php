@@ -1,5 +1,3 @@
-<!--	Copyright © 2015 - sayitagain.pw 
- 	Author - Dmitry Kuznetsov		-->
 <?php
 $db_server = "localhost";
 $db_user = "user1";

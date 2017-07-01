@@ -49,7 +49,7 @@
         </ul>
       </div>
     </div>
-  </nav>
+  </nav>  
   <br />
   <br />
   <br />
@@ -119,7 +119,7 @@
 	      </div>
 	    </div>
 	    <div class="row text-center row-last">
-		    <button type=button class="btn btn-success"  id="submit">
+		    <button type="button" class="btn btn-success" id="submit">
 		    <span class="glyphicon glyphicon-user"></span> Add and/or Refresh</button>
       </div>
 	  </form>
@@ -131,9 +131,6 @@
       <div class="panel-1">
         <div class="row">
           <div id="learners" class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
-            <!--?php
-              include 'getquote.php';
-            ?-->
           </div>
         </div>
         <div class="row">
