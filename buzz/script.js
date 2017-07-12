@@ -104,15 +104,16 @@ function levelRendering($f) {
     return $level;
 }
 function addlearner() {
-    const nick = $("#nick").val(),
-        skype = $("#skype").val(),
-        icq = $("#icq").val(),
-        age = $("#age").val(),
-        gender = $("#gender").val(),
-        goal = $("#goal").val(),
-        language = $("#language").val(),
-        location = getString($("#location").val(),"--"),
-        level = $("#level").val();
+    const $inputForm = $("#input-form"),
+        nick = $inputForm.find("#nick").val(),
+        skype = $inputForm.find("#skype").val(),
+        icq = $inputForm.find("#icq").val(),
+        age = $inputForm.find("#age").val(),
+        gender = $inputForm.find("#gender").val(),
+        goal = $inputForm.find("#goal").val(),
+        language = $inputForm.find("#language").val(),
+        location = getString($inputForm.find("#location").val(),"--"),
+        level = $inputForm.find("#level").val();
 
     // saveUserInfo
     $.cookie('nick', nick, { expires: 365, path: '/' });
@@ -216,15 +217,16 @@ function getString(f,def) {
     return r;
 }
 function restoreUserInfo() {
-    $("#nick").val(getString($.cookie("nick"),""));
-    $("#skype").val(getString($.cookie("skype"),""));
-    $("#icq").val(getString($.cookie("icq"),""));
-    $("#age").val(getString($.cookie("age"),"--"));
-    $("#gender").val(getString($.cookie("gender"),"--"));
-    $("#goal").val(getString($.cookie("goal"),"--"));
-    $("#language").val(getString($.cookie("language"),"--"));
-    $("#location").val(getString($.cookie("location"),"--"));
-    $("#level").val(getString($.cookie("level"),"--"));
+    var $inputForm = $("#input-form");
+    $inputForm.find("#nick").val(getString($.cookie("nick"),""));
+    $inputForm.find("#skype").val(getString($.cookie("skype"),""));
+    $inputForm.find("#icq").val(getString($.cookie("icq"),""));
+    $inputForm.find("#age").val(getString($.cookie("age"),"--"));
+    $inputForm.find("#gender").val(getString($.cookie("gender"),"--"));
+    $inputForm.find("#goal").val(getString($.cookie("goal"),"--"));
+    $inputForm.find("#language").val(getString($.cookie("language"),"--"));
+    $inputForm.find("#location").val(getString($.cookie("location"),"--"));
+    $inputForm.find("#level").val(getString($.cookie("level"),"--"));
 }
 $(document).ready(function(){
     iid = setInterval(addlearner, 870000);
