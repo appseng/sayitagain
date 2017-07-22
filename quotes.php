@@ -67,7 +67,7 @@
     <div class="conteiner">
       <div class="row">
       <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-	<div class="panel panel-default">
+	<div class="panel panel-primary">
 	  <div class="panel-heading text-center">
 	    <h2 class="text-center">Useful quotes for language learners</h2>
 	  </div>
