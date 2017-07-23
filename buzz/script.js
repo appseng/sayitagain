@@ -251,7 +251,7 @@ $(document).ready(function(){
             $icon = $addon.find('span'),
             state = false;
         if (!$group.data('validate')) {
-            state = $this.val() ? true : false;
+            state = $this.val().trim() ? true : false;
         }
         if (state) {
             $addon.removeClass('danger');
