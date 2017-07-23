@@ -141,9 +141,9 @@ function addlearner() {
                 location:location,
                 level:level
         },
-        success: function(data){
+        success: function(jsonData){
             var html = '';
-            switch (data[0]) {
+            switch (jsonData["type"]) {
                 case 'table':
                     html += "<table class=\"learners table table-condensed table-hover\"><thead><tr>"
                     + "<th>Nickname</th>"
@@ -156,8 +156,7 @@ function addlearner() {
                     + "<th class=\"last-time-info-updated\">Time</th>"
                     + "</tr></thead><tbody>";
 
-                    data.shift(); 
-                    data.forEach(function(item) {
+                    jsonData["data"].forEach(function(item) {
                         var goalText = goalRendering(item.goal),
                             goalTitle = goalTitleRendering(item.goal),
                             goaltd = (goalTitle =="")? goalText : "<abbr title=\"" + goalTitle + "\">" + goalText + "</abbr>",
@@ -195,9 +194,9 @@ function addlearner() {
                     break;
                 case 'quote':
                     html = "<span>A quote for language learners* :</span><blockquote>"
-                        + data[1]['blockquote']
+                        + jsonData["data"]['blockquote']
                         + "<footer>"
-                        + data[1]['footer']
+                        + jsonData["data"]['footer']
                         + "</footer></blockquote><br /><br /><br /><br /><br /><br /><span class=\"mark\">* A quote appears if there are no learners of a chosen language or if you have just visited this web-site. Enjoy it anyway.</span>";
                     break;
                 default:

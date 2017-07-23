@@ -7,8 +7,8 @@
 	    $quote = fgetcsv($f, 512, '%');
 	    fclose($f);
 			$res = [
-				"quote",
-				[
+				"type" => "quote",
+				"data" => [
 					'blockquote' => "$quote[0]",
 					'footer' => "$quote[1]"
 				]

@@ -4,9 +4,9 @@ include 'dbinfo.php';
 mb_internal_encoding("UTF-8");
 function check($field, $def,$len=1) {
     global $conn;
-    $f = (isset($field) && $field !="")? $field : $def;
-    if ($f != $def) {
-        $f = trim($f);
+    $f = trim($field);
+    $f = (isset($f) && $f !="")? $f : $def;
+    if ($f != $def) {        
         $f = stripslashes($f);
         $f = mysqli_real_escape_string($conn, $f);
         $f = htmlentities($f);
@@ -37,7 +37,8 @@ function selectInfo($language,$ip) {
 
     mysqli_stmt_bind_result($stmt, $nick, $skype, $icq, $age, $gender, $goal, $location, $language, $level, $visitedtime);
     $arResult = [
-        "table"
+        "type" => "table",
+        "data" => []
     ];
     while (mysqli_stmt_fetch($stmt)) {
         $lineResult = [
@@ -52,7 +53,7 @@ function selectInfo($language,$ip) {
             'level' => $level,
             'visitedtime' => $visitedtime
         ];
-        array_push($arResult, $lineResult);
+        array_push($arResult["data"], $lineResult);
     }
     
     $result = json_encode($arResult);
@@ -90,7 +91,7 @@ if (isset($_POST["gender"]) &&
     $language = check($_POST["language"],"--",80);
     $level = check($_POST["level"],-1);
 
-    $nick = check($_POST["nick"],"--",25);
+    $nick = check($_POST["nick"],"--",20);
     $skype = check($_POST["skype"],"--",50);
     $icq = check($_POST["icq"],"--",50);
     
