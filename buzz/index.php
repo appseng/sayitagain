@@ -61,63 +61,89 @@
       <div class="header-info text-center">
         <span class="mark h3">Some info about you</span>
       </div>
-	    <div class="row row-first">
-	      <div class="form-group col-sm-3 col-sm-offset-1 col-xs-3 col-xs-offset-1 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-1">
-          <div class="input-group  col-sm-12">
-            <input type="text" class="form-control" name="nick" id="nick" placeholder="Nick name" required>
-            <span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>
+      <div class="row">
+        <div class="col-xs-10 col-sm-offset-1 col-sm-3 col-xs-offset-1 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-1">
+          <div class="row row-first">
+            <div class="col-xs-12">
+              <div class="form-group">
+                <div class="input-group col-sm-12">
+                  <input type="text" class="form-control" name="nick" id="nick" placeholder="Nick name" required>
+                  <span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>
+                </div>
+              </div>
+            </div>
           </div>
-	      </div>
-	      <div class="form-group col-sm-3 col-xs-3 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-1">
-          <?php
-            include 'select_age.inc';
-          ?>
-	      </div>
-	      <div class="form-group col-sm-3 col-sm-offset-1 col-xs-4 col-md-4 col-lg-4 col-lg-offset-1">
-          <div class="input-group col-sm-12">
-            <?php
-              include 'select_country.inc';
-            ?>
-            <span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>
+          <div class="row row-middle">
+            <div class="col-xs-12">
+              <div class="form-group">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="skype" id="skype" placeholder="Skype">
+                  <span class="input-group-addon info"><span class="glyphicon glyphicon-asterisk"></span></span>
+                </div>
+              </div>
+            </div>
           </div>
-	      </div>
-	    </div>
-	    <div class="row row-middle">
-	      <div class="form-group col-sm-3 col-sm-offset-1 col-xs-3 col-xs-offset-1 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-1">
-          <div class="input-group">
-            <input type="text" class="form-control" name="skype" id="skype" placeholder="Skype">
-            <span class="input-group-addon info"><span class="glyphicon glyphicon-asterisk"></span></span>
+          <div class="row row-middle">
+            <div class="col-xs-12">
+              <div class="form-group">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="icq" id="icq" placeholder="ICQ number">
+                  <span class="input-group-addon info"><span class="glyphicon glyphicon-asterisk"></span></span>
+                </div>
+              </div>
+            </div>
           </div>
-	      </div>
-	      <div class="form-group col-sm-3 col-xs-3 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-1">
-          <?php
-            include 'select_gender.inc';
-          ?>
-	      </div>
-	      <div class="form-group col-sm-3 col-sm-offset-1 col-xs-4 col-md-4 col-lg-4 col-lg-offset-1">
-          <?php
-            include 'select_language.inc';
-          ?>
-	      </div>
-	    </div>
-	    <div class="row row-middle">
-	      <div class="form-group col-sm-3 col-sm-offset-1 col-xs-3 col-xs-offset-1 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-1">
-          <div class="input-group">
-            <input type="text" class="form-control" name="icq" id="icq" placeholder="ICQ number">
-            <span class="input-group-addon info"><span class="glyphicon glyphicon-asterisk"></span></span>
+        </div>
+        <div class="col-xs-10 col-xs-offset-1 col-sm-2 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-1">
+          <div class="row row-first">
+            <div class="form-group col-xs-12">
+              <?php
+                include 'select_age.inc';
+              ?>
+            </div>
           </div>
-	      </div>
-	      <div class="form-group col-sm-3 col-xs-3 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-1">
-          <?php
-            include 'select_goal.inc';
-          ?>
-	      </div>
-	      <div class="form-group col-sm-3 col-sm-offset-1 col-xs-4 col-md-4 col-lg-4 col-lg-offset-1">
-          <?php
-            include 'select_level.inc';
-          ?>
-	      </div>
-	    </div>
+          <div class="row row-middle">
+            <div class="form-group col-xs-12">
+              <?php
+                include 'select_gender.inc';
+              ?>
+            </div>
+          </div>
+          <div class="row row-middle">
+            <div class="form-group col-xs-12">
+              <?php
+                include 'select_goal.inc';
+              ?>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-10 col-xs-offset-1 col-sm-3 col-sm-offset-1 col-md-4 col-md-offset-1 col-lg-4 col-lg-offset-1">
+          <div class="row row-first">
+            <div class="form-group col-sm-12">
+              <div class="input-group col-sm-12">
+                <?php
+                  include 'select_country.inc';
+                ?>
+                <span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>
+              </div>
+            </div>
+          </div>
+          <div class="row row-middle">
+            <div class="form-group col-xs-12">
+              <?php
+                include 'select_language.inc';
+              ?>
+            </div>
+          </div>
+          <div class="row row-middle">
+            <div class="form-group col-xs-12">
+              <?php
+                include 'select_level.inc';
+              ?>
+            </div>
+          </div>
+        </div>
+      </div>
 	    <div class="row text-center row-last">
 		    <button type="button" class="btn btn-success" id="submit">
 		    <span class="glyphicon glyphicon-user"></span> Add and/or Refresh</button>
