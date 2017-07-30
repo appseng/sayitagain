@@ -1,6 +1,6 @@
 <!--	Copyright © 2015 - sayitagain.pw 
  	Author - Dmitry Kuznetsov		-->
-<select class="form-control lang selectpicker" data-width="100%" data-live-search=”true” id="location" name="location" >
+<select class="form-control lang selectpicker" data-width="100%" data-live-search=”true” id="location" name="location" required>
 <option value=""  selected="selected">Select location</option>
 <option value="AD">AD - Andorra</option>
 <option value="AE">AE - United Arab Emirates</option>
