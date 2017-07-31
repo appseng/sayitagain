@@ -27,7 +27,7 @@
   <!-- end google-analytics -->
   
     <nav class="navbar navbar-default">
-    <div class="conteiner-fluid">
+    <div class="container-fluid">
       <div class="navbar-header brand-name">
 	<a class="navbar-brand" href="."><b>S</b>ay <b>I</b>t <b>A</b>gain</a>
 	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -58,7 +58,7 @@
     </div>
   </nav>
   <br />
-    <div class="conteiner">
+    <div class="container-fluid">
       <div class="row">
       <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
 	<div class="panel panel-primary">
