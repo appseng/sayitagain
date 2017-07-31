@@ -36,7 +36,7 @@
   </script>
   <!-- end google-analytics -->
   
-  <nav class="navbar navbar-default navbar-fixed-top">
+  <nav class="navbar navbar-default">
     <div class="conteiner">
       <div class="navbar-header brand-name">
 	<a class="navbar-brand" href="."><b>S</b>ay <b>I</b>t <b>A</b>gain</a>
@@ -66,15 +66,7 @@
       </div>
     </div>
   </nav>
-
-    <br />
-    <br />
-    <br />
-     <!-- advertisement -->
-    <div class="text-center">
-
-    </div>
-    <br />
+  <br />
       
 	<div class="conteiner">
 	  <div class="row">
