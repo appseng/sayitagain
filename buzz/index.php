@@ -23,7 +23,7 @@
     <meta name="description" content=" Free practice, enjoyable conversations, speaking, writing in a lot of languages (English, Spanish, Mandarin, Russian, German, French, Italian etc.) online via Skype or/and ICQ. Start improving your speaking, writing, listening, reading skills as soon as you start to talk.">
   </head>
   <body>
-  <nav class="navbar navbar-default navbar-fixed-top">
+  <nav class="navbar navbar-default">
     <div class="conteiner-fluid">
       <div class="navbar-header brand-name">
         <a class="navbar-brand" href="../."><b>S</b>ay <b>I</b>t <b>A</b>gain</a>
@@ -50,9 +50,6 @@
       </div>
     </div>
   </nav>  
-  <br />
-  <br />
-  <br />
     <br />
     <div class="conteiner-fluid">
       <div class="panel panel-success">
