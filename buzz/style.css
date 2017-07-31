@@ -30,9 +30,6 @@ table.learners {
 table.learners td,table.learners th {
   text-align: center;
 }
-#learners {
-/*   background-color:#eeeeee; */
-}
 #flag { width:35px; }
 .last-time-info-updated { 
   display: none;  
