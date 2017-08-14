@@ -10,11 +10,9 @@ function check($field, $def,$len=1) {
         $f = stripslashes($f);
         $f = mysqli_real_escape_string($conn, $f);
         $f = htmlentities($f);
-//        $f = htmlspecialchars($f);
+        // $f = htmlspecialchars($f);
         if (is_string($f) && mb_strlen($f)>$len) {
-//            echo "L=".$len;
             $f = mb_substr($f,0,$len);
-//            echo "F=".$f.";";
         }
     }  
     return $f;
@@ -99,22 +97,8 @@ if (isset($_POST["gender"]) &&
     mysqli_query($conn, "START TRANSACTION");
     if ($nick !="--" &&
         ($skype != "--" || $icq != "--") &&
-//      $level != "--" &&
-        $location != "--" //&& 	
-//      $goal != "--" &&
-//      $gender != "--" &&
-//      $age != "--")
+        $location != "--"	
         ) {
-//      echo "$nick : $skype";
-        // update ip if it has been changed from previous visit on the page
-        // commented because of the cost of the operation
-        /*
-        $stmt = mysqli_prepare($conn,"update $db_table set ip = ? where nick = ? and skype = ? and icq = ? and age = ? and gender = ? and goal = ? and location = ? and language = ? and level = ?");
-        mysqli_stmt_bind_param($stmt, "ssssiiissi", $ip, $nick, $skype, $icq, $age, $gender, $goal, $location, $language, $level);
-        mysqli_stmt_execute($stmt);
-        mysqli_stmt_close($stmt);
-        */
-        
         // check if user is already registered
         $stmt = mysqli_prepare($conn,"select 1 from $db_table where ip = ?");
         mysqli_stmt_bind_param($stmt, "s" ,$ip);

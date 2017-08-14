@@ -1,5 +1,3 @@
-<!--	Copyright © 2015 - sayitagain.pw 
- 	Author - Dmitry Kuznetsov		-->
 <select class="form-control selectpicker" data-width="100%" name="age" id="age">
 	<option value="-1" selected>Age</option>
 	<option value="5">5</option>

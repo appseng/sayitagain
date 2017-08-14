@@ -1,5 +1,3 @@
-<!--	Copyright © 2015 - sayitagain.pw 
- 	Author - Dmitry Kuznetsov		-->
 <select class="form-control lang selectpicker" data-width="100%" name="level" id="level">
 	<option value="-1" selected="selected">Level</option>
 	<option value="0">Starter</option>
