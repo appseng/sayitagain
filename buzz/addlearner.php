@@ -2,10 +2,11 @@
 include 'dbinfo.php';
 
 mb_internal_encoding("UTF-8");
-function check($field, $def,$len=1) {
+
+function check($field, $def, $len=1) {
     global $conn;
     $f = trim($field);
-    $f = (isset($f) && $f !="")? $f : $def;
+    $f = (isset($f) && $f != "")? $f : $def;
     if ($f != $def) {        
         $f = stripslashes($f);
         $f = mysqli_real_escape_string($conn, $f);
@@ -46,7 +47,7 @@ function selectInfo($language,$ip) {
             'age' => $age,
             'gender' => $gender,
             'goal' => $goal,
-            'location' => strtolower($location),
+            'location' => strtoupper($location),
             'language' => $language,
             'level' => $level,
             'visitedtime' => $visitedtime
@@ -74,13 +75,12 @@ if (!filter_var($ip, FILTER_VALIDATE_IP)){
     die ("Error in HTTP_HEADER");
 }
 // checking all neccessary post variables
-if (isset($_POST["gender"]) && 
-        isset($_POST["age"]) && 
-        isset($_POST["goal"]) && 
-        isset($_POST["location"]) &&
-        isset($_POST["language"]) &&
-        isset($_POST["level"])
-    ) {
+if (isset($_POST["gender"],
+    $_POST["age"],
+    $_POST["goal"],
+    $_POST["location"],
+    $_POST["language"],
+    $_POST["level"])) {
     connect(); // function from dbinfo.php to connect to mysql
     $age = check($_POST["age"],-1,2);
     $gender = check($_POST["gender"],-1);

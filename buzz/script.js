@@ -180,9 +180,9 @@ function addlearner() {
                              + item.location
                              + "\" title=\""
                              + item.location
-                             + "\" src=\"http://www.geonames.org/flags/x/"
+                             + "\" src=\"http://www.geognos.com/api/en/countries/flag/"
                              + item.location
-                             + ".gif\" /></td><td><kbd>"
+                             + ".png\" /></td><td><kbd>"
                              + level
                              + "</kbd></td><td>"
                              + skype_url + icq_url
