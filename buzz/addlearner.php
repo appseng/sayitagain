@@ -3,17 +3,19 @@ include 'dbinfo.php';
 
 mb_internal_encoding("UTF-8");
 
-function check($field, $def, $len=1) {
+function check($field, $def, $len = 1) {
     global $conn;
+
     $f = trim($field);
-    $f = (isset($f) && $f != "")? $f : $def;
+    $f = (isset($f) && $f != "") ? $f : $def;
+
     if ($f != $def) {        
         $f = stripslashes($f);
         $f = mysqli_real_escape_string($conn, $f);
         $f = htmlentities($f);
         // $f = htmlspecialchars($f);
-        if (is_string($f) && mb_strlen($f)>$len) {
-            $f = mb_substr($f,0,$len);
+        if (is_string($f) && mb_strlen($f) > $len) {
+            $f = mb_substr($f, 0, $len);
         }
     }  
     return $f;
@@ -27,7 +29,7 @@ function sql_die() {
 function selectInfo($language,$ip) {
     global $db_table, $conn;
 
-    $stmt = mysqli_prepare($conn,"select nick,skype,icq,age,gender,goal,location,language,level,visitedtime from $db_table where language = ? order by visitedtime desc");
+    $stmt = mysqli_prepare($conn,"select nick, skype, icq, age, gender, goal, location, language, level, visitedtime from $db_table where language = ? order by visitedtime desc");
     mysqli_stmt_bind_param($stmt, "s", $language);
     mysqli_stmt_execute($stmt);
     
@@ -101,7 +103,7 @@ if (isset($_POST["gender"],
         ) {
         // check if user is already registered
         $stmt = mysqli_prepare($conn,"select 1 from $db_table where ip = ?");
-        mysqli_stmt_bind_param($stmt, "s" ,$ip);
+        mysqli_stmt_bind_param($stmt, "s", $ip);
         mysqli_stmt_execute($stmt);
         mysqli_stmt_store_result($stmt);
         $rows = mysqli_stmt_num_rows($stmt);
@@ -109,21 +111,21 @@ if (isset($_POST["gender"],
         mysqli_stmt_close($stmt);
         
         if ($rows == 0) {
-            $stmt = mysqli_prepare($conn,"insert into $db_table (nick,skype,icq,age,gender,goal,location,language,level,visitedtime,ip) values(?, ?, ?, ?, ?, ?, ?, ?, ?,now(), ?)");
-            mysqli_stmt_bind_param($stmt, "sssiiissis" , $nick, $skype, $icq, $age, $gender, $goal, $location, $language, $level, $ip);
+            $stmt = mysqli_prepare($conn,"insert into $db_table (nick, skype, icq, age, gender, goal, location, language, level, visitedtime, ip) values(?, ?, ?, ?, ?, ?, ?, ?, ?, now(), ?)");
+            mysqli_stmt_bind_param($stmt, "sssiiissis", $nick, $skype, $icq, $age, $gender, $goal, $location, $language, $level, $ip);
             mysqli_stmt_execute($stmt);
             mysqli_stmt_close($stmt);
         }
         else {
             $stmt = mysqli_prepare($conn,"update $db_table set nick=?, skype=?, icq=?, age=?, gender=?, goal=?, location=?, language=?, level=?, visitedtime=now() where ip = ?");
-            mysqli_stmt_bind_param($stmt, "sssiiissis" , $nick, $skype, $icq, $age, $gender, $goal, $location, $language, $level, $ip);
+            mysqli_stmt_bind_param($stmt, "sssiiissis", $nick, $skype, $icq, $age, $gender, $goal, $location, $language, $level, $ip);
             mysqli_stmt_execute($stmt);
             mysqli_stmt_close($stmt);
         }
     }
     else {
         $stmt = mysqli_prepare($conn,"delete from $db_table where ip=?");
-        mysqli_stmt_bind_param($stmt, "s" ,$ip);
+        mysqli_stmt_bind_param($stmt, "s", $ip);
         mysqli_stmt_execute($stmt);
         mysqli_stmt_close($stmt);
     }
@@ -132,7 +134,7 @@ if (isset($_POST["gender"],
     $q = mysqli_query($conn, $sql) or sql_die();
   
     mysqli_query($conn, "COMMIT");
-    selectInfo($language,$ip);
+    selectInfo($language, $ip);
     mysqli_close($conn);
 }
 ?>
