@@ -2,110 +2,132 @@
     var iid = null,
         tid = null;
 
-    function goalRendering($goal) {
-        switch($goal) {
+    function setCookie(cname, cvalue, exdays=365) {
+        var d = new Date();
+        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        var expires = "expires="+d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+        
+    function getCookie(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for(var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return null;
+    }
+
+    function goalRendering(goal) {
+        switch(goal) {
             case 0:
-                $goalString = "Chat";
+                goalString = "Chat";
                 break;
             case 1:
-                $goalString = "Friend";
+                goalString = "Friend";
                 break;
             case 2:
-                $goalString = "Student";
+                goalString = "Student";
                 break;
             case 3:
-                $goalString = "Teacher";
+                goalString = "Teacher";
                 break;
             default:
-                $goalString = "--";
+                goalString = "--";
         }
-        return $goalString;
+        return goalString;
     }
 
-    function goalTitleRendering($goalString) {
-        switch($goalString) {
+    function goalTitleRendering(goalString) {
+        switch(goalString) {
             case 0:
-                $goalTitle = "I just want to improve my skills.";
+                goalTitle = "I just want to improve my skills.";
                 break;
             case 1:
-                $goalTitle = "I just want to find a friend to learn a language together.";
+                goalTitle = "I just want to find a friend to learn a language together.";
                 break;
             case 2:
-                $goalTitle = "I just want to find a student to teach them.";
+                goalTitle = "I just want to find a student to teach them.";
                 break;
             case 3:
-                $goalTitle = "I just want to find a teacher to learn a language with them.";
+                goalTitle = "I just want to find a teacher to learn a language with them.";
                 break;
             default:
-                $goalTitle = "";
+                goalTitle = "";
         }
-        return $goalTitle;
+        return goalTitle;
     }
 
-    function genderRendering($gender) {
-        switch($gender) {
+    function genderRendering(gender) {
+        switch(gender) {
             case 0:
-                $genderString = "F";
+                genderString = "F";
                 break;
             case 1:
-                $genderString = "M";
+                genderString = "M";
                 break;
             case 2:
-                $genderString = "X";
+                genderString = "X";
                 break;
             default:
-                $genderString = "--";
+                genderString = "--";
                 break;
         }
-        return $genderString;
+        return genderString;
     }
 
-    function genderTitleRendering($genderString) {
-        switch($genderString) {
+    function genderTitleRendering(genderString) {
+        switch(genderString) {
             case "M":
-                $genderTitle = "Male";
+                genderTitle = "Male";
                 break;
         case "F":
-                $genderTitle = "Female";
+                genderTitle = "Female";
                 break;
             case "X":
-                $genderTitle = "Other";
+                genderTitle = "Other";
                 break;
             default:
-                $genderTitle = "";
+                genderTitle = "";
                 break;
         }
-        return $genderTitle;
+        return genderTitle;
     }
 
-    function levelRendering($level) {
-        switch($level) {
+    function levelRendering(level) {
+        switch(level) {
             case 0:
-                $levelString = "Starter";
+                levelString = "Starter";
                 break;
             case 1:
-                $levelString = "Elementary";
+                levelString = "Elementary";
                 break;
             case 2:
-                $levelString = "Pre-intermediate";
+                levelString = "Pre-intermediate";
                 break;
             case 3:
-                $levelString = "Intermediate";
+                levelString = "Intermediate";
                 break;
             case 4:
-                $levelString = "Upper-intermediate";
+                levelString = "Upper-intermediate";
                 break;
             case 5:
-                $levelString = "Advanced";
+                levelString = "Advanced";
                 break;
             case 6:
-                $levelString = "Proficient";
+                levelString = "Proficient";
                 break;
             default:
-                $levelString = "--";
+                levelString = "--";
                 break;
         }
-        return $levelString;
+        return levelString;
     }
 
     function addlearner() {
@@ -121,15 +143,15 @@
             level = $inputForm.find("#level").val();
 
         // saveUserInfo
-        $.cookie('nick', nick, { expires: 365, path: '/' });
-        $.cookie('skype', skype, { expires: 365, path: '/' });
-        $.cookie('icq', icq, { expires: 365, path: '/' });
-        $.cookie('age', age, { expires: 365, path: '/' });
-        $.cookie('gender', gender, { expires: 365, path: '/' });
-        $.cookie('goal', goal, { expires: 365, path: '/' });
-        $.cookie('language', language, { expires: 365, path: '/' });
-        $.cookie('location', location, { expires: 365, path: '/' });
-        $.cookie('level', level, { expires: 365, path: '/' });
+        setCookie('nick', nick);
+        setCookie('skype', skype);
+        setCookie('icq', icq);
+        setCookie('age', age);
+        setCookie('gender', gender);
+        setCookie('goal', goal);
+        setCookie('language', language);
+        setCookie('location', location);
+        setCookie('level', level);
 
         $.ajax({
             type: "POST",
@@ -222,15 +244,15 @@
 
     function restoreUserInfo() {
         var $inputForm = $("#input-form");
-        $inputForm.find("#nick").val(getString($.cookie("nick"),""));
-        $inputForm.find("#skype").val(getString($.cookie("skype"),""));
-        $inputForm.find("#icq").val(getString($.cookie("icq"),""));
-        $inputForm.find("#age").val(getString($.cookie("age"),"--"));
-        $inputForm.find("#gender").val(getString($.cookie("gender"),"--"));
-        $inputForm.find("#goal").val(getString($.cookie("goal"),"--"));
-        $inputForm.find("#language").val(getString($.cookie("language"),"--"));
-        $inputForm.find("#location").val(getString($.cookie("location"),"--"));
-        $inputForm.find("#level").val(getString($.cookie("level"),"--"));
+        $inputForm.find("#nick").val(getString(getCookie("nick"),""));
+        $inputForm.find("#skype").val(getString(getCookie("skype"),""));
+        $inputForm.find("#icq").val(getString(getCookie("icq"),""));
+        $inputForm.find("#age").val(getString(getCookie("age"),"--"));
+        $inputForm.find("#gender").val(getString(getCookie("gender"),"--"));
+        $inputForm.find("#goal").val(getString(getCookie("goal"),"--"));
+        $inputForm.find("#language").val(getString(getCookie("language"),"--"));
+        $inputForm.find("#location").val(getString(getCookie("location"),"--"));
+        $inputForm.find("#level").val(getString(getCookie("level"),"--"));
     }
 
     $(document).ready(function(){        
