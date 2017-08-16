@@ -294,6 +294,7 @@
         
         $('.input-group input[required], .input-group select[required]').trigger('keyup');
         
-        $("#submit").trigger('click');
+        addlearner();
+        iid = setInterval(addlearner, 870000);
     });
 })();
