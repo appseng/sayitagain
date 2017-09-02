@@ -61,7 +61,7 @@
                 <div class="col-xs-12">
                   <div class="form-group">
                     <div class="input-group col-sm-12">
-                      <input type="text" class="form-control" name="nick" id="nick" placeholder="Nick name" required>
+                      <input type="text" class="form-control" name="nick" id="nick" placeholder="Nickname" required>
                       <span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>
                     </div>
                   </div>
@@ -71,7 +71,7 @@
                 <div class="col-xs-12">
                   <div class="form-group">
                     <div class="input-group">
-                      <input type="text" class="form-control" name="skype" id="skype" placeholder="Skype">
+                      <input type="text" class="form-control" name="skype" id="skype" placeholder="Skype ID">
                       <span class="input-group-addon info"><span class="glyphicon glyphicon-asterisk"></span></span>
                     </div>
                   </div>
