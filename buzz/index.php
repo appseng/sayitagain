@@ -11,8 +11,6 @@
         'https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js',
         'https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.4/custom/bootstrap.min.css',
         'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js',
-        'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.5/js/bootstrap-select.min.js',
-        'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.5/css/bootstrap-select.min.css',
         'style.css',
         'script.js']);
     </script>
@@ -91,30 +89,36 @@
             <div class="col-xs-10 col-xs-offset-1 col-sm-2 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-1">
               <div class="row row-first">
                 <div class="form-group col-xs-12">
-                  <?php
+                  <div class="input-group col-xs-12">
+                <?php
                     include 'select_age.inc';
                   ?>
+                </div>
                 </div>
               </div>
               <div class="row row-middle">
                 <div class="form-group col-xs-12">
+                <div class="input-group col-xs-12">
                   <?php
                     include 'select_gender.inc';
                   ?>
                 </div>
+                </div>
               </div>
               <div class="row row-middle">
                 <div class="form-group col-xs-12">
+                <div class="input-group col-xs-12">
                   <?php
                     include 'select_goal.inc';
                   ?>
+                </div>
                 </div>
               </div>
             </div>
             <div class="col-xs-10 col-xs-offset-1 col-sm-3 col-sm-offset-1 col-md-4 col-md-offset-1 col-lg-4 col-lg-offset-1">
               <div class="row row-first">
-                <div class="form-group col-sm-12">
-                  <div class="input-group col-sm-12">
+                <div class="form-group col-xs-12">
+                  <div class="input-group col-xs-12">
                     <?php
                       include 'select_country.inc';
                     ?>
@@ -124,16 +128,20 @@
               </div>
               <div class="row row-middle">
                 <div class="form-group col-xs-12">
+                <div class="input-group col-xs-12">
                   <?php
                     include 'select_language.inc';
                   ?>
                 </div>
+                </div>
               </div>
               <div class="row row-middle">
                 <div class="form-group col-xs-12">
+                <div class="input-group col-xs-12">
                   <?php
                     include 'select_level.inc';
                   ?>
+                </div>
                 </div>
               </div>
             </div>
@@ -149,7 +157,7 @@
       <br />
       <div class="panel-1">
         <div class="row">
-          <div id="learners" class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+          <div id="learners" class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
           </div>
         </div>
         <div class="row">

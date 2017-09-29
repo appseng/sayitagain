@@ -258,8 +258,6 @@
     $(document).ready(function(){        
         restoreUserInfo();
         
-        $('.selectpicker').selectpicker();
-
         $("#submit").click(function(){
             $("#learners").html('');
             $("#loader").show();
