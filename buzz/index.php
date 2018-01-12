@@ -7,12 +7,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.load.min.js"></script>
 
     <script>
-        head.load([
+      head.load([
         'https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js',
         'https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.4/custom/bootstrap.min.css',
         'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js',
         'style.css',
-        'script.js']);
+        'script.js'
+      ]);
     </script>
     
     <title>SIA: Language Practice</title>    

@@ -22,11 +22,12 @@ function check($field, $def, $len = 1) {
 }
 
 function sql_die() {
+    global $conn;
     mysqli_query($conn, "ROLLBACK");
-    die(mysql_error());
+    die(mysqli_error($conn));
 }
 
-function selectInfo($language,$ip) {
+function selectInfo($language) {
     global $db_table, $conn;
 
     $stmt = mysqli_prepare($conn,"select nick, skype, icq, age, gender, goal, location, language, level, visitedtime from $db_table where language = ? order by visitedtime desc");
@@ -134,7 +135,6 @@ if (isset($_POST["gender"],
     $q = mysqli_query($conn, $sql) or sql_die();
   
     mysqli_query($conn, "COMMIT");
-    selectInfo($language, $ip);
+    selectInfo($language);
     mysqli_close($conn);
 }
-?>
