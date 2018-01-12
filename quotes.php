@@ -58,9 +58,9 @@
 								while (!feof($f)) {
 									$quote = fgetcsv($f, 512, '%');
 
-									$rev = ($i%2 == 1)?" class=\"blockquote-reverse\"":"";
+									$rev = ($i%2 == 1) ? " class=\"blockquote-reverse\"" : "";
 									echo "<div class=\"row\"><div class=\"col-xs-12\"><blockquote$rev>";
-									echo $quote[0]."<footer>".$quote[1];
+									echo $quote[0] . "<footer>" . $quote[1];
 									echo "</footer></blockquote></div></div>";
 									$i++;
 								}

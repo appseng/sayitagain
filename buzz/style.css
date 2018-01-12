@@ -12,10 +12,10 @@ background-size: 470px 470px, 970px 970px, 410px 410px, 610px 610px, 530px 530px
 margin-right:15px;
 }
 .brand-name b { color: black; }
-.header-info {margin-top:0px; margin-bottom:9px;}
-.row-first { margin-top:3px;}
-.row-middle {margin-top:2px;}
-.row-last {margin-top:2px; margin-bottom:4px;}
+.header-info { margin-top: 0; margin-bottom: 9px; }
+.row-first { margin-top: 3px; }
+.row-middle { margin-top: 2px; }
+.row-last { margin-top:2px; margin-bottom: 4px; }
 input[type='text'] { margin-right: 10px; }
 
 div.center, h1, h2 { text-align: center; }
@@ -23,7 +23,7 @@ div.center, h1, h2 { text-align: center; }
 table.learners {
   border: 1px solid;
   border-radius: 5px;
-  border-spacing: 0px;
+  border-spacing: 0;
   border-collapse: separate;
 /*   text-align: center; */
 }
