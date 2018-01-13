@@ -1,4 +1,4 @@
-<select class="form-control lang selectpicker" data-width="100%" name="level" id="level">
+<select class="form-control lang" name="level" id="level">
 	<option value="-1" selected="selected">Level</option>
 	<option value="0">Starter</option>
 	<option value="1">Elementary</option>

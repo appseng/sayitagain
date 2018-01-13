@@ -1,4 +1,4 @@
-<select class="form-control lang selectpicker" data-width="100%" data-live-search=”true” name="language" id="language">
+<select class="form-control lang" name="language" id="language">
 	<optgroup label="Language to talk">
 		<option value="English" selected="selected">English</option>
 		<option value="Mandarin">Mandarin</option>

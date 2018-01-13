@@ -1,4 +1,4 @@
-<select class="form-control asg selectpicker" data-width="100%" name="goal" id="goal">
+<select class="form-control asg" name="goal" id="goal">
 	<option value="-1" selected="selected">I'd like</option>
 	<option value="0">Chat to improve my skills.</option>
 	<option value="1">Friend learning language with me.</option>

@@ -1,4 +1,4 @@
-<select class="form-control selectpicker" data-width="100%" name="gender" id="gender">
+<select class="form-control" name="gender" id="gender">
 	<option value="-1" selected="selected">Gender</option>
 	<option value="0">Female</option>
 	<option value="1">Male</option>

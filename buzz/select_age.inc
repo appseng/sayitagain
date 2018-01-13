@@ -1,4 +1,4 @@
-<select class="form-control selectpicker" data-width="100%" name="age" id="age">
+<select class="form-control" name="age" id="age">
 	<option value="-1" selected>Age</option>
 	<option value="5">5</option>
 	<option value="6">6</option>
