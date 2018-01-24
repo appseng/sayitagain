@@ -284,8 +284,9 @@
                 $addon = $group.find('.input-group-addon'),
                 $icon = $addon.find('span'),
                 state = false;
+
             if (!$group.data('validate')) {
-                state = $this.val().trim() ? true : false;
+                state = !!$this.val().trim();
             }
             if (state) {
                 $addon.removeClass('danger');
@@ -297,9 +298,7 @@
                 $addon.addClass('danger');
                 $icon.attr('class', 'glyphicon glyphicon-remove');
             }
-        });
-        
-        $('.input-group input[required], .input-group select[required]').trigger('keyup');
+        }).trigger('keyup');
         
         addLearner();
         iid = setInterval(addLearner, 870000);
