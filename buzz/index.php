@@ -92,28 +92,28 @@
               <div class="row row-first">
                 <div class="form-group col-xs-12">
                   <div class="input-group col-xs-12">
-                <?php
-                    include 'select_age.inc';
-                  ?>
-                </div>
-                </div>
-              </div>
-              <div class="row row-middle">
-                <div class="form-group col-xs-12">
-                <div class="input-group col-xs-12">
-                  <?php
-                    include 'select_gender.inc';
-                  ?>
-                </div>
+                    <?php
+                      include 'select_age.inc';
+                    ?>
+                  </div>
                 </div>
               </div>
               <div class="row row-middle">
                 <div class="form-group col-xs-12">
-                <div class="input-group col-xs-12">
-                  <?php
-                    include 'select_goal.inc';
-                  ?>
+                  <div class="input-group col-xs-12">
+                    <?php
+                      include 'select_gender.inc';
+                    ?>
+                  </div>
                 </div>
+              </div>
+              <div class="row row-middle">
+                <div class="form-group col-xs-12">
+                  <div class="input-group col-xs-12">
+                    <?php
+                      include 'select_goal.inc';
+                    ?>
+                  </div>
                 </div>
               </div>
             </div>
@@ -130,20 +130,20 @@
               </div>
               <div class="row row-middle">
                 <div class="form-group col-xs-12">
-                <div class="input-group col-xs-12">
-                  <?php
-                    include 'select_language.inc';
-                  ?>
-                </div>
+                  <div class="input-group col-xs-12">
+                    <?php
+                      include 'select_language.inc';
+                    ?>
+                  </div>
                 </div>
               </div>
               <div class="row row-middle">
                 <div class="form-group col-xs-12">
-                <div class="input-group col-xs-12">
-                  <?php
-                    include 'select_level.inc';
-                  ?>
-                </div>
+                  <div class="input-group col-xs-12">
+                    <?php
+                      include 'select_level.inc';
+                    ?>
+                  </div>
                 </div>
               </div>
             </div>
