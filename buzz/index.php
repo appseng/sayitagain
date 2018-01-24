@@ -178,7 +178,7 @@
       <br />
       <br />
       <div class="center">
-	      <span>
+        <span>
           <kbd>Copyright © 2015-2018</kbd> | <code><a href="privacy.html">Privacy policy</a></code> | <abbr title="Say It Again!"><code><a href="/">sayitagain.16mb.com</a></code></abbr> | <code><a href="mailto:sayitagain666@gmail.com">contacts</a></code>
         </span>
       </div>

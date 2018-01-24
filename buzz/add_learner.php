@@ -13,7 +13,7 @@ function check($field, $def, $len = 1) {
         $f = stripslashes($f);
         $f = mysqli_real_escape_string($conn, $f);
         $f = htmlentities($f);
-        // $f = htmlspecialchars($f);
+
         if (is_string($f) && mb_strlen($f) > $len) {
             $f = mb_substr($f, 0, $len);
         }

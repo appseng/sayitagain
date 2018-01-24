@@ -14,10 +14,10 @@
         var ca = document.cookie.split(';');
         for(var i = 0; i < ca.length; i++) {
             var c = ca[i];
-            while (c.charAt(0) == ' ') {
+            while (c.charAt(0) === ' ') {
                 c = c.substring(1);
             }
-            if (c.indexOf(name) == 0) {
+            if (c.indexOf(name) === 0) {
                 return c.substring(name.length, c.length);
             }
         }
@@ -25,6 +25,8 @@
     }
 
     function goalRendering(goal) {
+        var goalString;
+
         switch(goal) {
             case 0:
                 goalString = "Chat";
@@ -45,6 +47,8 @@
     }
 
     function goalTitleRendering(goalString) {
+        var goalTitle;
+
         switch(goalString) {
             case 0:
                 goalTitle = "I just want to improve my skills.";
@@ -65,6 +69,8 @@
     }
 
     function genderRendering(gender) {
+        var genderString;
+
         switch(gender) {
             case 0:
                 genderString = "F";
@@ -83,6 +89,8 @@
     }
 
     function genderTitleRendering(genderString) {
+        var genderTitle;
+
         switch(genderString) {
             case "M":
                 genderTitle = "Male";
@@ -101,6 +109,8 @@
     }
 
     function levelRendering(level) {
+        var levelString;
+
         switch(level) {
             case 0:
                 levelString = "Starter";
@@ -130,7 +140,7 @@
         return levelString;
     }
 
-    function addlearner() {
+    function addLearner() {
         const $inputForm = $("#input-form"),
             nick = $inputForm.find("#nick").val(),
             skype = $inputForm.find("#skype").val(),
@@ -155,7 +165,7 @@
 
         $.ajax({
             type: "POST",
-            url: "addlearner.php",
+            url: "add_learner.php",
             data: {
                     nick:nick,
                     skype:skype,
@@ -185,14 +195,14 @@
                         jsonData["data"].forEach(function(item) {
                             var goalString = goalRendering(item.goal),
                                 goalTitle = goalTitleRendering(item.goal),
-                                goaltd = (goalTitle =="")? goalString : "<abbr title=\"" + goalTitle + "\">" + goalString + "</abbr>",
+                                goaltd = (goalTitle === "")? goalString : "<abbr title=\"" + goalTitle + "\">" + goalString + "</abbr>",
                                 gender = genderRendering(item.gender),
                                 genderTitle = genderTitleRendering(gender),
-                                gendertd = (genderTitle =="") ? gender : "<abbr title=\"" + genderTitle + "\">" + gender + "</abbr>",
+                                gendertd = (genderTitle === "") ? gender : "<abbr title=\"" + genderTitle + "\">" + gender + "</abbr>",
                                 level = levelRendering(item.level),
-                                age = (item.age != -1)? item.age : "--",
-                                skype_url = (item.skype != null && item.skype != "--") ? "<a href=\"skype:" + item.skype + "?chat\"><img alt=\"skype:" + item.skype + "?chat\" title=\"skype:" + item.skype + "?chat\" src=\"skype12.png\" /><a>" : "",
-                                icq_url =  (item.icq != null && item.icq != "--") ? "<a href=\"icq:" + item.icq + "\"><img src=\"icq.png\" alt=\"icq:" + item.icq + "\" title=\"icq:" + item.icq + "\" /><a>" : "";
+                                age = (item.age !== -1)? item.age : "--",
+                                skype_url = (item.skype != null && item.skype !== "--") ? "<a href=\"skype:" + item.skype + "?chat\"><img alt=\"skype:" + item.skype + "?chat\" title=\"skype:" + item.skype + "?chat\" src=\"skype12.png\" /><a>" : "",
+                                icq_url =  (item.icq != null && item.icq !== "--") ? "<a href=\"icq:" + item.icq + "\"><img src=\"icq.png\" alt=\"icq:" + item.icq + "\" title=\"icq:" + item.icq + "\" /><a>" : "";
                             
                             html += "<tr><td><kbd>"
                                 + item.nick
@@ -238,7 +248,7 @@
         }
 
     function getString(f, def) {
-        r = (f == "" || f == "undefined" || f == null) ? def : f;
+        r = (f === "" || f === "undefined" || f == null) ? def : f;
         return r;
     }
 
@@ -264,13 +274,12 @@
             
             clearInterval(iid);
             clearTimeout(tid);
-            tid = setTimeout(addlearner, 500);
-            iid = setInterval(addlearner, 870000);
+            tid = setTimeout(addLearner, 500);
+            iid = setInterval(addLearner, 870000);
         });
 
         $('.input-group input[required], .input-group select[required]').on('keyup change', function() {
             var $this = $(this),
-                $form = $this.closest('form'),
                 $group = $this.closest('.input-group'),
                 $addon = $group.find('.input-group-addon'),
                 $icon = $addon.find('span'),
@@ -292,7 +301,7 @@
         
         $('.input-group input[required], .input-group select[required]').trigger('keyup');
         
-        addlearner();
-        iid = setInterval(addlearner, 870000);
+        addLearner();
+        iid = setInterval(addLearner, 870000);
     });
 })();
