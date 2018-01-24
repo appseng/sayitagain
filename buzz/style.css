@@ -53,7 +53,7 @@ table.learners td,table.learners th {
 
 /* loading animation
 ---------------------- */
-.load-wrapp {
+.load-wrap {
     width: 150px;
     height: 100px;
     margin: 0 auto;
@@ -61,7 +61,7 @@ table.learners td,table.learners th {
     border-radius: 5px;
     text-align: center;
 }
-.load-wrapp p {padding: 0 0 20px;}
+.load-wrap p {padding: 0 0 20px;}
 .ring-1 {
     width: 10px;
     height: 10px;
