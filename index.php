@@ -27,7 +27,7 @@
       
     <nav class="navbar navbar-default">
       <div class="container-fluid">
-        <div class="navbar-header brand-name"
+        <div class="navbar-header brand-name">
           <a class="navbar-brand" href="."><strong>S</strong>ay <strong>I</strong>t <strong>A</strong>gain</a>
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="icon-bar"></span>
