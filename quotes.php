@@ -54,7 +54,7 @@
 						</div>
 						<div class="panel-body">
 							<?php
-								$f = fopen("buzz/quotes.txt", "r");
+								$f = fopen("txt/quotes.txt", "r");
 								$i=0;
 								while (!feof($f)) {
 									$quote = fgetcsv($f, 512, '%');

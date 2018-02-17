@@ -1,6 +1,6 @@
  <?php
     $r = rand(1,49);
-	$f = fopen("quotes.txt", "r");
+	$f = fopen("../txt/quotes.txt", "r");
 	for ($k=1; $k<$r; $k++)
 	    fgetcsv($f, 512, '%');
 	    
