@@ -201,8 +201,8 @@
                                 gendertd = (genderTitle === "") ? gender : "<abbr title=\"" + genderTitle + "\">" + gender + "</abbr>",
                                 level = levelRendering(item.level),
                                 age = (item.age !== -1)? item.age : "--",
-                                skype_url = (item.skype != null && item.skype !== "--") ? "<a href=\"skype:" + item.skype + "?chat\"><img alt=\"skype:" + item.skype + "?chat\" title=\"skype:" + item.skype + "?chat\" src=\"skype12.png\" /><a>" : "",
-                                icq_url =  (item.icq != null && item.icq !== "--") ? "<a href=\"icq:" + item.icq + "\"><img src=\"icq.png\" alt=\"icq:" + item.icq + "\" title=\"icq:" + item.icq + "\" /><a>" : "";
+                                skype_url = (item.skype != null && item.skype !== "--") ? "<a href=\"skype:" + item.skype + "?chat\"><img alt=\"skype:" + item.skype + "?chat\" title=\"skype:" + item.skype + "?chat\" src=\"../skype12.png\" /><a>" : "",
+                                icq_url =  (item.icq != null && item.icq !== "--") ? "<a href=\"icq:" + item.icq + "\"><img src=\"../icq.png\" alt=\"icq:" + item.icq + "\" title=\"icq:" + item.icq + "\" /><a>" : "";
                             
                             html += "<tr><td><kbd>"
                                 + item.nick

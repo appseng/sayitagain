@@ -11,9 +11,9 @@
         'https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js',
         'https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.4/custom/bootstrap.min.css',
         'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js',
-        '../main.css',
-        'style.css',
-        'script.js'
+        '../css/main.css',
+        'css/style.css',
+        'js/script.js'
       ]);
     </script>
     
@@ -93,7 +93,7 @@
                 <div class="form-group col-xs-12">
                   <div class="input-group col-xs-12">
                     <?php
-                      include 'select_age.inc';
+                      include 'inc/select_age.inc';
                     ?>
                   </div>
                 </div>
@@ -102,7 +102,7 @@
                 <div class="form-group col-xs-12">
                   <div class="input-group col-xs-12">
                     <?php
-                      include 'select_gender.inc';
+                      include 'inc/select_gender.inc';
                     ?>
                   </div>
                 </div>
@@ -111,7 +111,7 @@
                 <div class="form-group col-xs-12">
                   <div class="input-group col-xs-12">
                     <?php
-                      include 'select_goal.inc';
+                      include 'inc/select_goal.inc';
                     ?>
                   </div>
                 </div>
@@ -122,7 +122,7 @@
                 <div class="form-group col-xs-12">
                   <div class="input-group col-xs-12">
                     <?php
-                      include 'select_country.inc';
+                      include 'inc/select_country.inc';
                     ?>
                     <span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>
                   </div>
@@ -132,7 +132,7 @@
                 <div class="form-group col-xs-12">
                   <div class="input-group col-xs-12">
                     <?php
-                      include 'select_language.inc';
+                      include 'inc/select_language.inc';
                     ?>
                   </div>
                 </div>
@@ -141,7 +141,7 @@
                 <div class="form-group col-xs-12">
                   <div class="input-group col-xs-12">
                     <?php
-                      include 'select_level.inc';
+                      include 'inc/select_level.inc';
                     ?>
                   </div>
                 </div>
