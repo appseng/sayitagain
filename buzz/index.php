@@ -12,8 +12,8 @@
         'https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.4/custom/bootstrap.min.css',
         'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js',
         '../css/main.css',
-        'css/style.css',
-        'js/script.js'
+        '../css/buzz-style.css',
+        '../js/buzz-script.js'
       ]);
     </script>
     
@@ -179,7 +179,7 @@
       <br />
       <div class="center">
         <span>
-          <kbd>Copyright © 2015-2018</kbd> | <code><a href="privacy.html">Privacy policy</a></code> | <abbr title="Say It Again!"><code><a href="/">sayitagain.16mb.com</a></code></abbr> | <code><a href="mailto:sayitagain666@gmail.com">contacts</a></code>
+          <kbd>Copyright © 2015-<?=date('Y')?></kbd> | <code><a href="privacy.html">Privacy policy</a></code> | <abbr title="Say It Again!"><code><a href="/">sayitagain.16mb.com</a></code></abbr> | <code><a href="mailto:sayitagain666@gmail.com">contacts</a></code>
         </span>
       </div>
       <br />
