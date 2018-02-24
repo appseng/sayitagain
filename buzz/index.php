@@ -22,33 +22,10 @@
     <meta name="description" content=" Free practice, enjoyable conversations, speaking, writing in a lot of languages (English, Spanish, Mandarin, Russian, German, French, Italian etc.) online via Skype or/and ICQ. Start improving your speaking, writing, listening, reading skills as soon as you start to talk.">
   </head>
   <body>
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header brand-name">
-          <a class="navbar-brand" href="../."><strong>S</strong>ay <strong>I</strong>t <strong>A</strong>gain</a>
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>  
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="../quotes.php">Quotes</a></li>
-            <li><a href="../tips.html">Tips</a></li>
-            <li role="presentation" class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
-                English <span class="caret"></span>
-              </a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="../sites.html">English resources</a></li>
-                <li><a href="../symphony.html">Sympony in Slang</a></li>           
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <?php
+      $file = 'buzz/';
+      include_once '../inc/menu.php';
+    ?>
     <div class="container-fluid">
       <div class="panel panel-success">
         <form class="form-inline" id="input-form">
