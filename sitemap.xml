@@ -2,37 +2,37 @@
 		<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
 	<loc>http://sayitagain.16mb.com/</loc>
-	<lastmod>2018-01-12T19:20:12+01:00</lastmod>
+	<lastmod>2018-02-24T21:16:00+03:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
 	<loc>http://sayitagain.16mb.com/.</loc>
-	<lastmod>2018-01-12T19:20:12+01:00</lastmod>
+	<lastmod>2018-02-24T21:16:00+03:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
 	<loc>http://sayitagain.16mb.com/quotes.php</loc>
-	<lastmod>2018-01-12T19:20:12+01:00</lastmod>
+	<lastmod>2018-02-24T21:16:00+03:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>http://sayitagain.16mb.com/tips.html</loc>
-	<lastmod>2018-01-12T19:20:12+01:00</lastmod>
+	<loc>http://sayitagain.16mb.com/tips.php</loc>
+	<lastmod>2018-02-24T21:16:00+03:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>http://sayitagain.16mb.com/sites.html</loc>
-	<lastmod>2018-01-12T19:20:12+01:00</lastmod>
+	<loc>http://sayitagain.16mb.com/sites.php</loc>
+	<lastmod>2018-02-24T21:16:00+03:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>http://sayitagain.16mb.com/symphony.html</loc>
-	<lastmod>2018-01-12T19:20:12+01:00</lastmod>
+	<loc>http://sayitagain.16mb.com/symphony.php</loc>
+	<lastmod>2018-02-24T21:16:00+03:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
 	<loc>http://sayitagain.16mb.com/buzz/</loc>
-	<lastmod>2018-01-12T19:20:12+01:00</lastmod>
+	<lastmod>2018-02-24T21:16:00+03:00</lastmod>
 	<priority>0.8</priority>
 </url>
 </urlset>
