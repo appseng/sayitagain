@@ -24,7 +24,7 @@
                     </a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="<?=$file_dir?>sites.php">English resources</a></li>
-                        <li><a href="<?=$file_dir?>symphony.php">Sympony in Slang</a></li>
+                        <li><a href="<?=$file_dir?>symphony.php">Symphony in Slang</a></li>
                     </ul>
                 </li>
             </ul>
