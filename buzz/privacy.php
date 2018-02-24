@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.4/custom/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
+    <link rel="stylesheet" type="text/css" href="../css/main.css"/>
     <link rel="stylesheet" type="text/css" href="../css/style.css"/>
 
     <title>Privacy policy</title>    
@@ -16,36 +17,10 @@
     <meta name="description" content=" Free practice, enjoyable conversations, speaking, writing in a lot of languages (English, Spanish, Mandarin, Russian, German, French, Italian etc.) online via Skype or/and ICQ. Start improving your speaking, writing, listening, reading skills as soon as you start to talk.">
   </head>
   <body>
-    <nav class="navbar navbar-default">
-      <div class="conteiner-fluid">
-        <div class="navbar-header brand-name">
-          <a class="navbar-brand" href="../."><b>S</b>ay <b>I</b>t <b>A</b>gain</a>
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>  
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="../quotes.php">Quotes</a></li>
-            <li><a href="../tips.php">Tips</a></li>
-            <li role="presentation" class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
-                English <span class="caret"></span>
-              </a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="../sites.php">English resources</a></li>
-                <li><a href="../symphony.php">Sympony in Slang</a></li>
-              </ul>
-            </li>
-          </ul>
-          <div  class="navbar-text navbar-right start-button">
-            <a href="." class="btn btn-success"><span class="glyphicon glyphicon-search"></span></a>
-          </div>
-        </div>
-      </div>
-    </nav>
+      <?php
+        $file = 'privacy.php';
+        include_once '../inc/menu.php';
+      ?>
     <div class="container-fluid">
         <div class="row">
           <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
@@ -55,7 +30,7 @@
               </div>
               <div class="panel-body">
                 <div class="row"><div class="col-xs-12">
-                    <p>This web-site picks your personal information when you enter somethink in the panel "Some info about you" <a href=".">here</a>.</p>
+                    <p>This web-site picks your personal information when you enter something in the panel "Some info about you" <a href=".">here</a>.</p>
                     <p>This web-site receives and stores your IP address for identification of your computer.</p>
                 </div></div>
               </div>

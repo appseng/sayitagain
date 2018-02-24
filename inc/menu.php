@@ -1,9 +1,12 @@
 <?php
     $is_buzz_file = $file == 'buzz/';
+    $is_privacy_file = $file == 'privacy.php';
+    $is_buzz_file = $is_buzz_file || $is_privacy_file;
+
     $brand = $is_buzz_file ? '../.' : '.';
     $file_dir = $is_buzz_file ? '../' : '';
-
 ?>
+
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header brand-name">
@@ -29,7 +32,7 @@
                 </li>
             </ul>
             <?php
-                if (!$is_buzz_file) :
+                if (!$is_buzz_file || $is_privacy_file) :
             ?>
                 <div class="navbar-text navbar-right start-button">
                     <a href="buzz/" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></a>
