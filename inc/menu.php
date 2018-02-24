@@ -5,6 +5,7 @@
 
     $brand = $is_buzz_file ? '../.' : '.';
     $file_dir = $is_buzz_file ? '../' : '';
+    $buzz_dir = $is_privacy_file ? '.' : 'buzz/';
 ?>
 
 <nav class="navbar navbar-default">
@@ -35,7 +36,7 @@
                 if (!$is_buzz_file || $is_privacy_file) :
             ?>
                 <div class="navbar-text navbar-right start-button">
-                    <a href="buzz/" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></a>
+                    <a href="<?=$buzz_dir?>" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></a>
                 </div>
             <?php
                 endif;
