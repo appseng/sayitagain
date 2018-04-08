@@ -8,9 +8,9 @@
 
     <script>
       head.load([
-        'https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js',
-        'https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.4/custom/bootstrap.min.css',
-        'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js',
+        'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js',
+        'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css',
+        'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js',
         '../css/main.css',
         '../css/buzz-style.css',
         '../js/buzz-script.js'
