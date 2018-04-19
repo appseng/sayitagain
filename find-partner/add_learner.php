@@ -1,5 +1,10 @@
 <?php
-include 'dbinfo.php';
+if (file_exists('../dbinfo/dbinfo.php')) {
+    include '../dbinfo/dbinfo.php';
+}
+else {
+    include 'dbinfo.php';
+}
 
 mb_internal_encoding("UTF-8");
 
