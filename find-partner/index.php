@@ -23,7 +23,7 @@
   </head>
   <body>
     <?php
-      $file = 'buzz/';
+      $file = 'find-partner/';
       include_once '../inc/menu.php';
     ?>
     <div class="container-fluid">

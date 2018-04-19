@@ -11,7 +11,7 @@
 		<link rel="stylesheet" type="text/css" href="css/main.css"/>
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
 
-		<title>SIA: Sites to Improve Listening Skill</title>
+		<title>SIA: Sites to Improve Listening Skills</title>
 		<meta name="keywords" content="free english spanish mandarin cheneese french italian german russian real conversation find partner learn spoken english speak speaking write writing skill enjoy language exchange partner grammar school slang exercises lessons on skype via icq vocabulary expansion dialogs study pronunciation spoken native speakers every taste different preparation exam ket pet fce cae cfe toefl IELTS BEC TOEIC EFL ESL">
 		<meta name="description" content="Web-sites to improve listening skill in English">
   	</head>
@@ -25,7 +25,7 @@
 				<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
 					<div class="panel panel-warning">
 						<div class="panel-heading text-center">
-							<h2>Web-sites to improve listening skill in English</h2>
+							<h2>Web-sites to improve listening skills in English</h2>
 						</div>
 						<div class="panel-body">
 							<div class="row">

@@ -42,7 +42,7 @@
       </div>
       <div class="row">
         <div class="text-center">
-          <a href="buzz/" class="btn btn-success">
+          <a href="<?=$buzz_dir?>" class="btn btn-success">
             <span class="glyphicon glyphicon-search"></span> Start searching
           </a>
         </div>
