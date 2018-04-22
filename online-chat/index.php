@@ -18,7 +18,7 @@
   </head>
   <body>
     <?php
-        $file = __FILE__;
+        $file = 'online-chat/';
         include_once '../inc/menu.php';
     ?>
     <div id="chat_sayitagain"></div>
