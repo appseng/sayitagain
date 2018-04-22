@@ -31,6 +31,7 @@
                         <li><a href="<?=$file_dir?>symphony-in-slang.php">Symphony in Slang</a></li>
                     </ul>
                 </li>
+                <li><a href="<?=$file_dir?>chat/.">Chat</a></li>
             </ul>
             <?php
                 if (!$is_buzz_file || $is_privacy_file) :
