@@ -46,6 +46,7 @@ function sql_die() {
 function selectInfo($language) {
     global $db_table, $conn;
 
+    // get a list of learners
     $stmt = mysqli_prepare($conn,"select nick, skype, icq, age, gender, goal, location, language, level, visitedtime from $db_table where language = ? order by visitedtime desc");
     mysqli_stmt_bind_param($stmt, "s", $language);
     mysqli_stmt_execute($stmt);
@@ -54,6 +55,8 @@ function selectInfo($language) {
     $rows = mysqli_stmt_num_rows($stmt);
 
     mysqli_stmt_bind_result($stmt, $nick, $skype, $icq, $age, $gender, $goal, $location, $language, $level, $visitedtime);
+    
+    // prepare data for transering to a web-page
     $arResult = [
         "type" => "table",
         "data" => []
@@ -79,6 +82,7 @@ function selectInfo($language) {
     mysqli_stmt_free_result($stmt);
     mysqli_stmt_close($stmt);
 
+    // echo result data
     if ($rows > 0) {
         echo $result;
     }
@@ -86,21 +90,24 @@ function selectInfo($language) {
         include 'getquote.php';
     }
 }
-/// executive part begins
+/// the executive part begins
 // checking ip
 $ip = $_SERVER["REMOTE_ADDR"];
 if (!filter_var($ip, FILTER_VALIDATE_IP)){
     echo "Error in HTTP_HEADER. REMOTE_ADDR has been detected incorrectly.";
     die ("Error in HTTP_HEADER");
 }
-// checking all neccessary post variables
+
+// checking all neccessary POST-variables
 if (isset($_POST["gender"],
     $_POST["age"],
     $_POST["goal"],
     $_POST["location"],
     $_POST["language"],
     $_POST["level"])) {
-    connect(); // function from dbinfo.php to connect to mysql
+    connect(); // function to connect to mysql
+
+    // checking input data from a AJAX-request
     $age = check($_POST["age"],-1,2);
     $gender = check($_POST["gender"],-1);
     $goal = check($_POST["goal"],-1);
@@ -127,30 +134,31 @@ if (isset($_POST["gender"],
         mysqli_stmt_free_result($stmt);
         mysqli_stmt_close($stmt);
         
-        if ($rows == 0) {
+        if ($rows == 0) { // add a learner in the list
             $stmt = mysqli_prepare($conn,"insert into $db_table (nick, skype, icq, age, gender, goal, location, language, level, visitedtime, ip) values(?, ?, ?, ?, ?, ?, ?, ?, ?, now(), ?)");
             mysqli_stmt_bind_param($stmt, "sssiiissis", $nick, $skype, $icq, $age, $gender, $goal, $location, $language, $level, $ip);
             mysqli_stmt_execute($stmt);
             mysqli_stmt_close($stmt);
         }
-        else {
+        else { // update info of the learner
             $stmt = mysqli_prepare($conn,"update $db_table set nick=?, skype=?, icq=?, age=?, gender=?, goal=?, location=?, language=?, level=?, visitedtime=now() where ip = ?");
             mysqli_stmt_bind_param($stmt, "sssiiissis", $nick, $skype, $icq, $age, $gender, $goal, $location, $language, $level, $ip);
             mysqli_stmt_execute($stmt);
             mysqli_stmt_close($stmt);
         }
     }
-    else {
+    else { // delete learner from the list
         $stmt = mysqli_prepare($conn,"delete from $db_table where ip=?");
         mysqli_stmt_bind_param($stmt, "s", $ip);
         mysqli_stmt_execute($stmt);
         mysqli_stmt_close($stmt);
     }
 
+    // delete out-of-date learner (who hasn't been on the site more a day)
     $sql= "delete from $db_table where DATE_ADD(visitedtime, INTERVAL 1 DAY) < now()";
     $q = mysqli_query($conn, $sql) or sql_die();
   
     mysqli_query($conn, "COMMIT");
-    selectInfo($language);
+    selectInfo($language); // output learners' data
     mysqli_close($conn);
 }
