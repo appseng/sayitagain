@@ -10,6 +10,7 @@ mb_internal_encoding("UTF-8");
 
 $conn = null;
 
+// connect to a database
 function connect() {
     global $db_server, $db_user, $db_password, $db_name, $conn;
 
@@ -21,6 +22,7 @@ function connect() {
     return $conn;
 }
 
+// checking and normalizing of data-fields of POST-fields
 function check($field, $def, $len = 1) {
     global $conn;
 
@@ -39,13 +41,15 @@ function check($field, $def, $len = 1) {
     return $f;
 }
 
+// if there is an error during connection, then rollback
 function sql_die() {
     global $conn;
     mysqli_query($conn, "ROLLBACK");
     die(mysqli_error($conn));
 }
 
-function selectInfo($language) {
+// echo data of learner of a particular language to the web-page in JSON
+function echo_info($language) {
     global $db_table, $conn;
 
     // get a list of learners
@@ -89,7 +93,21 @@ function selectInfo($language) {
         echo $result;
     }
     else {
-        include 'getquote.php';
+        $r = rand(1,49);
+        $f = fopen("../txt/quotes.txt", "r");
+        for ($k=1; $k<$r; $k++)
+            fgetcsv($f, 512, '%');
+            
+        $quote = fgetcsv($f, 512, '%');
+        fclose($f);
+        $res = [
+            "type" => "quote",
+            "data" => [
+                'blockquote' => "$quote[0]",
+                'footer' => "$quote[1]"
+            ]
+        ];
+        echo json_encode($res);
     }
 }
 /// the executive part begins
@@ -161,6 +179,6 @@ if (isset($_POST["gender"],
     $q = mysqli_query($conn, $sql) or sql_die();
   
     mysqli_query($conn, "COMMIT");
-    selectInfo($language); // output learners' data
+    echo_info($language); // output learners' data
     mysqli_close($conn);
 }
