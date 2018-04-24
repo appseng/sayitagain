@@ -18,7 +18,7 @@
   </head>
   <body>
       <?php
-        $file = 'privacy.php';
+        $file = 'privacy-policy.php';
         include_once '../inc/menu.php';
       ?>
     <div class="container-fluid">
