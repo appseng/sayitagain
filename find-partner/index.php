@@ -143,7 +143,7 @@
           <div  class="text-center" id="loader">
             <div class="load-wrap">
               <div class="load-4">
-                <p>Loading ...</p>
+                <p><strong>Loading ...</strong></p>
                 <div class="ring-1"></div>
               </div>
             </div>
