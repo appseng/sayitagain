@@ -1,9 +1,9 @@
 <?php
-if (file_exists('../dbinfo/dbinfo.php')) {
-    include '../dbinfo/dbinfo.php';
+if (file_exists('../dbinfo/db_info.php')) {
+    include '../dbinfo/db_info.php';
 }
 else {
-    include 'dbinfo.php';
+    include 'db_info.php';
 }
 
 mb_internal_encoding("UTF-8");

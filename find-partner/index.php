@@ -12,12 +12,12 @@
         'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css',
         'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js',
         '../css/main.css',
-        '../css/buzz-style.css',
-        '../js/buzz-script.js'
+        '../css/find-partner-style.css',
+        '../js/find-partner-script.js'
       ]);
     </script>
     
-    <title>SIA: Language Practice</title>    
+    <title>SIA: Find a Conversation Partner for Language Practice</title>    
     <meta name="keywords" content="free english spanish mandarin cheneese french italian german russian real conversation partner learn spoken english speak speaking write writing skill enjoy language exchange partner grammar school slang exercises lessons on skype via icq vocabulary expansion dialogs study pronunciation spoken native speakers every taste different preparation exam ket pet fce cae cfe toefl IELTS BEC TOEIC EFL ESL">
     <meta name="description" content="Useful web-application to have found a conversation partner for language practice">
   </head>
