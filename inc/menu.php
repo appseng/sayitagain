@@ -1,13 +1,14 @@
 <?php
-    $is_buzz_file = $file == 'find-partner/';
+    define('BUZZ_FILE', 'find-partner/');
+    $is_buzz_file = $file == BUZZ_FILE;
     $is_privacy_file = $file == 'privacy.php';
     $is_chat_file = $file == 'online-chat/';
     $is_buzz_file = $is_buzz_file || $is_privacy_file;
 
-    $brand = $is_buzz_file ? '../.' : '.';
+    $brand = ($is_buzz_file || $is_chat_file) ? '../.' : '.';
     $file_dir = ($is_buzz_file || $is_chat_file) ? '../' : '';
-    $buzz_dir = $is_privacy_file ? '.' : 'find-partner/';
-    $buzz_dir = $is_chat_file ? '../find-partner/' : $buzz_dir;
+    $buzz_dir = $is_privacy_file ? '.' : BUZZ_FILE;
+    $buzz_dir = $is_chat_file ? '../' . BUZZ_FILE : $buzz_dir;
 ?>
 
 <nav class="navbar navbar-default">
