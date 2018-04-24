@@ -8,6 +8,8 @@ else {
 
 mb_internal_encoding("UTF-8");
 
+$conn = null;
+
 function connect() {
     global $db_server, $db_user, $db_password, $db_name, $conn;
 
