@@ -23,7 +23,7 @@
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="<?=$file_dir?>useful-quotes.php">Quotes</a></li>
+                <li><a href="<?=$file_dir?>useful-quotes-for-language-learners.php">Quotes</a></li>
                 <li><a href="<?=$file_dir?>how-to-gain-fluency-in-language.php">Tips</a></li>
                 <li role="presentation" class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
@@ -31,7 +31,7 @@
                     </a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="<?=$file_dir?>sites-to-improve-listening-skills.php">English resources</a></li>
-                        <li><a href="<?=$file_dir?>symphony-in-slang.php">Symphony in Slang</a></li>
+                        <li><a href="<?=$file_dir?>popular-slang-or-1950s-symphony-in-slang.php">Symphony in Slang</a></li>
                     </ul>
                 </li>
                 <li><a href="<?=$file_dir?>online-chat/.">Chat</a></li>

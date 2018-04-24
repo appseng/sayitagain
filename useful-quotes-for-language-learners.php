@@ -11,7 +11,7 @@
         <link rel="stylesheet" type="text/css" href="css/main.css"/>
         <link rel="stylesheet" type="text/css" href="css/style.css"/>
 
-        <title>SIA: Useful Quotes</title>
+        <title>SIA: Useful Quotes for language learners</title>
         <meta name="keywords" content="free english spanish mandarin cheneese french italian german russian real conversation partner learn spoken english speak speaking write writing skill enjoy language exchange partner grammar school slang exercises lessons on skype via icq vocabulary expansion dialogs study pronunciation spoken native speakers every taste different preparation exam ket pet fce cae cfe toefl IELTS BEC TOEIC EFL ESL">
         <meta name="description" content="Useful quotes for language learners">
     </head>
