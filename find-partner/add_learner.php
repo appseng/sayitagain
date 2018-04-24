@@ -8,6 +8,17 @@ else {
 
 mb_internal_encoding("UTF-8");
 
+function connect() {
+    global $db_server, $db_user, $db_password, $db_name, $conn;
+
+    $conn = new mysqli($db_server, $db_user, $db_password, $db_name);
+    // Check connection
+    if (mysqli_connect_errno()) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+    return $conn;
+}
+
 function check($field, $def, $len = 1) {
     global $conn;
 
