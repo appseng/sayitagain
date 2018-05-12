@@ -31,7 +31,7 @@
                     </a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="<?=$file_dir?>sites-to-improve-listening-skills.php">English resources</a></li>
-                        <li><a href="<?=$file_dir?>popular-slang-or-1950s-symphony-in-slang.php">Symphony in Slang</a></li>
+                        <li><a href="<?=$file_dir?>popular-slang-of-1950s-symphony-in-slang.php">Symphony in Slang</a></li>
                     </ul>
                 </li>
                 <li><a href="<?=$file_dir?>online-chat/.">Chat</a></li>
