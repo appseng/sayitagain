@@ -13,7 +13,7 @@
         
     	<title>SIA: How to Gain Fluency in Language</title>
 	    <meta name="keywords" content="free english spanish mandarin cheneese french italian german russian real conversation partner learn spoken english speak speaking write writing skill enjoy language exchange partner grammar school slang exercises lessons on skype via icq vocabulary expansion dialogs study pronunciation spoken native speakers every taste different preparation exam ket pet fce cae cfe toefl IELTS BEC TOEIC EFL ESL">
-    	<meta name="description" content="How to Gain Fluency in Language Without Focusing on Grammar Study"
+    	<meta name="description" content="How to Gain Fluency in Language Without Focusing on Grammar Study">
 	</head>
   	<body>
         <?php
