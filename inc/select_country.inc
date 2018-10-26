@@ -1,5 +1,5 @@
 <select class="form-control lang" id="location" name="location" required>
-	<option value=""  selected="selected">Select location</option>
+	<option value=" "  selected="selected">Select location</option>
 	<option value="AD">AD - Andorra</option>
 	<option value="AE">AE - United Arab Emirates</option>
 	<option value="AF">AF - Afghanistan</option>

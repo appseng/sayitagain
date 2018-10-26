@@ -257,12 +257,13 @@
         $inputForm.find("#nick").val(getString(getCookie("nick"),""));
         $inputForm.find("#skype").val(getString(getCookie("skype"),""));
         $inputForm.find("#icq").val(getString(getCookie("icq"),""));
-        $inputForm.find("#age").val(getString(getCookie("age"),"--"));
-        $inputForm.find("#gender").val(getString(getCookie("gender"),"--"));
-        $inputForm.find("#goal").val(getString(getCookie("goal"),"--"));
-        $inputForm.find("#language").val(getString(getCookie("language"),"--"));
-        $inputForm.find("#location").val(getString(getCookie("location"),"--"));
-        $inputForm.find("#level").val(getString(getCookie("level"),"--"));
+        $inputForm.find("#age").val(getString(getCookie("age"),"-1"));
+        
+        $inputForm.find("#gender").val(getString(getCookie("gender"),"-1"));
+        $inputForm.find("#goal").val(getString(getCookie("goal"),"-1"));
+        $inputForm.find("#language").val(getString(getCookie("language"),"English"));
+        $inputForm.find("#location").val(getString(getCookie("location")," "));
+        $inputForm.find("#level").val(getString(getCookie("level"),"-1"));
     }
 
     $(document).ready(function(){        
