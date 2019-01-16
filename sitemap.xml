@@ -1,38 +1,43 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 		<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
-	<loc>http://sayitagain.16mb.com/</loc>
-	<lastmod>2018-04-24T15:02:00+03:00</lastmod>
+	<loc>http://sayitagain.000webhostapp.com/</loc>
+	<lastmod>2019-01-16T15:02:00+03:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>http://sayitagain.16mb.com/.</loc>
-	<lastmod>2018-04-24T15:02:00+03:00</lastmod>
+	<loc>http://sayitagain.000webhostapp.com/.</loc>
+	<lastmod>2019-01-16T15:02:00+03:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>http://sayitagain.16mb.com/useful-quotes-for-language-learners.php</loc>
-	<lastmod>2018-04-24T15:02:00+03:00</lastmod>
+	<loc>http://sayitagain.000webhostapp.com/useful-quotes-for-language-learners.php</loc>
+	<lastmod>2019-01-16T15:02:00+03:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>http://sayitagain.16mb.com/how-to-gain-fluency-in-language.php</loc>
-	<lastmod>2018-04-24T15:02:00+03:00</lastmod>
+	<loc>http://sayitagain.000webhostapp.com/how-to-gain-fluency-in-language.php</loc>
+	<lastmod>2019-01-16T15:02:00+03:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>http://sayitagain.16mb.com/sites-to-improve-listening-skills.php</loc>
-	<lastmod>2018-04-24T15:02:00+03:00</lastmod>
+	<loc>http://sayitagain.000webhostapp.com/sites-to-improve-listening-skills.php</loc>
+	<lastmod>2019-01-16T15:02:00+03:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>http://sayitagain.16mb.com/popular-slang-or-1950s-symphony-in-slang.php</loc>
-	<lastmod>2018-04-24T15:02:00+03:00</lastmod>
+	<loc>http://sayitagain.000webhostapp.com/popular-slang-or-1950s-symphony-in-slang.php</loc>
+	<lastmod>2019-01-16T15:02:00+03:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>http://sayitagain.16mb.com/find-partner/</loc>
-	<lastmod>2018-04-24T15:02:00+03:00</lastmod>
+	<loc>http://sayitagain.000webhostapp.com/find-partner/</loc>
+	<lastmod>2019-01-16T15:02:00+03:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://sayitagain.000webhostapp.com/online-chat/</loc>
+	<lastmod>2019-01-16T15:02:00+03:00</lastmod>
 	<priority>0.8</priority>
 </url>
 </urlset>
