@@ -116,8 +116,7 @@
                 </li>
               </ul>
               <div class="text-center">
-                <iframe style="border:none;" src="//vk.com/video_ext.php?oid=3131409&amp;id=165898763&amp;hash=b822de72824c7170&amp;sd" width="480" height="240"></iframe>
-              </div>
+                <iframe width="480" height="240" src="https://player.vimeo.com/video/100989067" frameborder="0" allowfullscreen></iframe>              </div>
             </div>
           </div>
         </div>
