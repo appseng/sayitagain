@@ -1,5 +1,6 @@
 <?php
     define('BUZZ_FILE', 'find-partner/');
+
     $is_buzz_file = $file == BUZZ_FILE;
     $is_privacy_file = $file == 'privacy-policy.php';
     $is_chat_file = $file == 'online-chat/';

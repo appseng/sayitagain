@@ -4,16 +4,21 @@
 
     function setCookie(cname, cvalue, exdays = 365) {
         var d = new Date();
+
         d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+
         var expires = "expires="+d.toUTCString();
+
         document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
     }
         
     function getCookie(cname) {
-        var name = cname + "=";
-        var ca = document.cookie.split(';');
+        var name = cname + "=",
+            ca = document.cookie.split(';');
+
         for(var i = 0; i < ca.length; i++) {
             var c = ca[i];
+
             while (c.charAt(0) === ' ') {
                 c = c.substring(1);
             }
@@ -179,6 +184,7 @@
             },
             success: function(jsonData){
                 var html = '';
+
                 switch (jsonData["type"]) {
                     case 'table':
                         html += "<table class=\"learners table table-condensed table-hover\"><thead><tr>"
@@ -245,7 +251,7 @@
             },
             dataType: "json"  
         });
-        }
+    }
 
     function getString(f, def) {
         r = (f === "" || f === "undefined" || f == null) ? def : f;
@@ -254,6 +260,7 @@
 
     function restoreUserInfo() {
         var $inputForm = $("#input-form");
+
         $inputForm.find("#nick").val(getString(getCookie("nick"),""));
         $inputForm.find("#skype").val(getString(getCookie("skype"),""));
         $inputForm.find("#icq").val(getString(getCookie("icq"),""));

@@ -24,15 +24,19 @@
     <div id="chat_sayitagain"></div>
     <script type="text/javascript">
         var chatovodOnLoad = chatovodOnLoad || [];
+
         chatovodOnLoad.push(function() {
             chatovod.addChatToDivId("chat_sayitagain", {host: "sayitagain.chatovod.com",
                 width: "100%", height: 480, defaultLanguage: "en"});
         });
         (function() {
             var po = document.createElement('script');
+
             po.type = 'text/javascript'; po.charset = "UTF-8"; po.async = true;
             po.src = (document.location.protocol=='https:'?'https:':'http:') + '//st1.chatovod.com/api/js/v1.js?2';
+
             var s = document.getElementsByTagName('script')[0];
+
             s.parentNode.insertBefore(po, s);
         })();
     </script>
