@@ -30,15 +30,15 @@
 						<div class="panel-body">
 							<div class="row">
 								<div class="col-xs-12">
-									<blockquote>Englishspeak.com is a free and award winning new system for learning to speak English. The program contains lessons that give special attention to English pronunciation and everyday language.
-										<footer><a href="http://www.englishspeak.com/" target="_blank">www.englishspeak.com</a></footer>
+									<blockquote>The sole purpose of this site is to help students improve their listening and reading comprehension of the English language. 'BITS English Language Learning' is completely non-profit and contains no advertising.
+										<footer><a href="http://esl-bits.net/" target="_blank">esl-bits.net</a></footer>
 									</blockquote>
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-xs-12">
-									<blockquote>While the California Distance Learning Project (CDLP) is no longer an active project, its purpose was to help expand learner access to adult basic education services in California.
-										<footer><a href="http://www.cdlponline.org/" target="_blank">www.cdlponline.org</a></footer>
+									<blockquote>This is a free web-site, created to help enhance language learning beyond the static page (i.e., just the printed word) and would focus on listening skills----a relatively underdeveloped area on the Internet at that time.
+										<footer><a href="http://www.esl-lab.com/" target="_blank">esl-lab.com</a></footer>
 									</blockquote>
 								</div>
 							</div>
@@ -58,15 +58,8 @@
 							</div>
 							<div class="row">
 								<div class="col-xs-12">
-									<blockquote>This is a free web-site, created to help enhance language learning beyond the static page (i.e., just the printed word) and would focus on listening skills----a relatively underdeveloped area on the Internet at that time.
-										<footer><a href="http://www.esl-lab.com/" target="_blank">esl-lab.com</a></footer>
-									</blockquote>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-xs-12">
-									<blockquote>The sole purpose of this site is to help students improve their listening and reading comprehension of the English language. 'BITS English Language Learning' is completely non-profit and contains no advertising.
-										<footer><a href="http://esl-bits.net/" target="_blank">esl-bits.net</a></footer>
+									<blockquote>While the California Distance Learning Project (CDLP) is no longer an active project, its purpose was to help expand learner access to adult basic education services in California.
+										<footer><a href="http://www.cdlponline.org/" target="_blank">www.cdlponline.org</a></footer>
 									</blockquote>
 								</div>
 							</div>
