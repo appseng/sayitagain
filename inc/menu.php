@@ -41,7 +41,7 @@
                 if (!$is_buzz_file || $is_privacy_file) :
             ?>
                 <div class="navbar-text navbar-right start-button">
-                    <a href="<?=$buzz_dir?>" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></a>
+                    <a href="<?=$buzz_dir?>" class="btn btn-success"><span class="glyphicon glyphicon-search"></span> Find partner</a>
                 </div>
             <?php
                 endif;
