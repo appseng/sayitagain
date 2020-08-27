@@ -28,6 +28,9 @@
               <h2>Popular slang of 1950s<br />(based on the cartoon<br />«Symphony in Slang»)</h2>
             </div>
             <div class="panel-body">
+              <div class="text-center">
+                <a href="https://player.vimeo.com/video/100989067" target="_blank"><img class="img-responsive col-xs-12" src="img/symphony-in-slang.jpg" alt="Symphony in Slang"></a>
+              </div>
               <ul class="list-unstyled">
                 <li><b>What's new? How's tricks? What's cooking?</b> — How are you?
                 </li><li><b>to be born with a silver spoon in one's mouth</b> — financial and social advantages from family connections
@@ -115,9 +118,6 @@
                 </li><li><b>to die laughing</b> — to laugh very long and hard
                 </li>
               </ul>
-              <div class="text-center">
-                <iframe width="480" height="240" src="https://player.vimeo.com/video/100989067" frameborder="0" allowfullscreen></iframe>              </div>
-            </div>
           </div>
         </div>
       </div>
